@@ -1,8 +1,8 @@
 import React from "react";
 import type {Metadata} from "next";
+import "@workspace/ui/styles/globals.scss"
 import {GeistSans} from "geist/font/sans";
 import {Providers} from "@/components/providers"
-import "@workspace/ui/styles/globals.scss"
 
 export const metadata: Metadata = {
     title: "Mono Portfolio Layout",

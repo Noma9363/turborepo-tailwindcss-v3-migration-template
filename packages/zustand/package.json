@@ -1,0 +1,26 @@
+{
+  "name": "@workspace/zustand",
+  "version": "0.0.1",
+  "private": true,
+  "description": "zustand state management",
+  "main": "./src/store.ts",
+  "types": "./src/store.ts",
+  "exports": {
+    ".": "./src/store.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1"
+}
