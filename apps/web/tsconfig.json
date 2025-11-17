@@ -5,7 +5,8 @@
     "paths": {
       "@/*": ["./*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"],
-      "@workspace/zustand/*": ["../../packages/zustand/src/*"]
+      "@workspace/zustand/*": ["../../packages/zustand/src/*"],
+      "@workspace/assets/*": ["../../packages/ui/assets/*"]
     },
     "plugins": [
       {

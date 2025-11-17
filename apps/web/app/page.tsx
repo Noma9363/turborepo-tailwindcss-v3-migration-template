@@ -1,17 +1,25 @@
 'use client';
 
-import {Button} from "@workspace/ui/components/button"
-import {useCountStore} from "@workspace/zustand"
+import React from "react";
+import {Hero} from "@/components/page/hero";
+import {About} from "@/components/page/about";
+import {cn} from "@workspace/ui/lib/utils";
+import './page.scss';
 
-export default function Page() {
-    const {count, increment, decrement} = useCountStore();
+const Page = () => {
+
+
     return (
-        <div className="flex items-center justify-center min-h-svh">
-            <div className="flex flex-col items-center justify-center gap-4">
-                <h1 className="text-2xl font-bold">Cnt : {count}</h1>
-                <Button variant="outline" className="" size="sm" onClick={increment}>Increment</Button>
-                <Button variant="outline" className="" size="sm" onClick={decrement}>Decrement</Button>
+        <main className={cn("page-root")}>
+            <div className="flex items-center w-full justify-center min-h-svh] flex-col">
+                <Hero/>
+                <About/>
+                {/*
+                    soooooon
+                */}
             </div>
-        </div>
+        </main>
     )
 }
+
+export default Page;

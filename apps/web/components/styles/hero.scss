@@ -1,0 +1,25 @@
+
+.metallic-bg{
+  --mask: linear-gradient(to bottom,
+          oklch(.145 0 0 / 0) 0,   oklch(.145 0 0 / 0.1) 20%,
+          oklch(.145 0 0 / 1) 95%, oklch(.145 0 0 / 1) 100%
+  ) 100% 50% / 100% 100% repeat-x;
+
+  position: relative;
+
+  &:before{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background: oklch(.145 0 0);
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+}

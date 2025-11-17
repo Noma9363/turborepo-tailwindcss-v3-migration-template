@@ -3,6 +3,8 @@ import type {Metadata} from "next";
 import {GeistSans} from "geist/font/sans";
 import {Providers} from "@/components/providers"
 import "@workspace/ui/styles/globals.scss"
+import {FloatingNav} from "@/components/ui/navigation/float-navigation";
+
 
 export const metadata: Metadata = {
     title: "Mono Portfolio Layout",
@@ -16,10 +18,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko" suppressHydrationWarning>
-        <body className={`${GeistSans.className} antialiased`}>
-        <Providers>
-            {children}
-        </Providers>
+        <body className={`${GeistSans.className} antialiased relative`}>
+        <FloatingNav/>
+            <Providers>
+                    {children}
+            </Providers>
         </body>
         </html>
     )

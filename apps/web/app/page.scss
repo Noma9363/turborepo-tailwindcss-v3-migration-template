@@ -1,0 +1,14 @@
+@use "@workspace/ui/styles/mixins" as *;
+@use "@workspace/ui/styles/variables" as *;
+.page-root{
+  // @include resize-root-padding;
+}
+
+
+.page-container{
+  @include responsive-container;
+  @include resize-root-padding;
+}
+
+/* in 2k monitor */
+//max-width: 1232px;
