@@ -13,6 +13,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
+    "gsap-trial": "^3.13.0",
     "lucide-react": "^0.475.0",
     "next-themes": "^0.4.6",
     "ogl": "^1.0.11",
@@ -35,6 +36,7 @@
     "next": "^15.4.5",
     "playwright": "^1.56.1",
     "postcss": "^8.5.6",
+    "react-icons": "^5.5.0",
     "sass": "^1.94.0",
     "tailwind-animate": "^0.2.10",
     "tailwindcss": "^3.4.18",
@@ -52,6 +54,7 @@
     "./tailwind.config": "./tailwind.config.ts",
     "./postcss.config": "./postcss.config.mjs",
     "./lib/*": "./src/lib/*.ts",
+    "./lib/gsap-utils": "./src/lib/gsap-utils.ts",
     "./components/*": "./src/components/*.tsx",
     "./components/ui/*": "./src/components/ui/*.tsx",
     "./components/common/*": "./src/components/common/*.tsx",
@@ -60,8 +63,10 @@
     "./interfaces": "./src/interfaces/index.ts",
     "./interfaces/*": "./src/interfaces/*/*.ts",
     "./styles/*": "./src/styles/*.{css,sass,css}",
+    "./reactbits/*": "./src/components/reactbits/*.tsx",
     "./gsap/*": "./src/components/gsap/*.tsx",
     "./parallax": "./src/components/parallax/index.tsx",
-    "./parallax/*": "./src/components/parallax/*.tsx"
+    "./parallax/*": "./src/components/parallax/*.tsx",
+    "./icons": "./src/components/icons/index.ts"
   }
 }

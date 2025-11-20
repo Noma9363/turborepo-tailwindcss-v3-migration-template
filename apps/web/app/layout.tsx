@@ -8,7 +8,10 @@ import {FloatingNav} from "@/components/ui/navigation/float-navigation";
 
 export const metadata: Metadata = {
     title: "Mono Portfolio Layout",
-    description: "Portfolio built with Turborepo"
+    description: "Portfolio built with Turborepo",
+    other:{
+        'darkreader-lock' : ''
+    }
 }
 
 export default function RootLayout({
@@ -18,6 +21,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko" suppressHydrationWarning>
+        <head>
+            <meta name='darkreader-lock' content="" />
+            <title>Joy Han</title>
+        </head>
         <body className={`${GeistSans.className} antialiased relative`}>
         <FloatingNav/>
             <Providers>

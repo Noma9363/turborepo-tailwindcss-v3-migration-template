@@ -1,5 +1,5 @@
 import {AnimatedContentProps} from "@workspace/ui/interfaces/gsap/animated-context";
-import AnimatedContent from "@workspace/ui/components/gsap/animation-content/AnimatedContent";
+import AnimatedContent from "@workspace/ui/components/reactbits/animation-content/AnimatedContent";
 
 
 

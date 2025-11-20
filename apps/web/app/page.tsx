@@ -5,6 +5,7 @@ import {Hero} from "@/components/page/hero";
 import {About} from "@/components/page/about";
 import {cn} from "@workspace/ui/lib/utils";
 import './page.scss';
+import {Projects} from "@/components/page/projects";
 
 const Page = () => {
 
@@ -14,6 +15,7 @@ const Page = () => {
             <div className="flex items-center w-full justify-center min-h-svh] flex-col">
                 <Hero/>
                 <About/>
+                <Projects/>
                 {/*
                     soooooon
                 */}

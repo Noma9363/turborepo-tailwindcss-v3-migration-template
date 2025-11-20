@@ -9,6 +9,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@workspace/ui/*": ["./src/*"],
+      "@workspace/ui/icons" : ["./src/components/icons/index.ts"],
       "@workspace/gsap/*": ["./src/components/gsap/*"],
       "@workspace/parallax/*": ["./src/components/parallax/*"],
       "@workspace/common/*": ["./src/components/common/*"],

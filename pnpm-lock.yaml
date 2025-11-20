@@ -213,6 +213,9 @@ importers:
       gsap:
         specifier: ^3.13.0
         version: 3.13.0
+      gsap-trial:
+        specifier: ^3.13.0
+        version: 3.13.0
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.1.1)
@@ -252,10 +255,10 @@ importers:
         version: 19.1.7(@types/react@19.1.9)
       '@vitest/browser-playwright':
         specifier: ^4.0.8
-        version: 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+        version: 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
       '@vitest/coverage-v8':
         specifier: ^4.0.8
-        version: 4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)
+        version: 4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -274,6 +277,9 @@ importers:
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@19.1.1)
       sass:
         specifier: ^1.94.0
         version: 1.94.0
@@ -291,7 +297,7 @@ importers:
         version: 5.9.2
       vitest:
         specifier: ^4.0.8
-        version: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+        version: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
 
   packages/zustand:
     dependencies:
@@ -2066,6 +2072,10 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
+  gsap-trial@3.13.0:
+    resolution: {integrity: sha512-EBaAv7AsgzOIi7E5ny+0YAn0qgz/lX+0B8efrr4su/dhpdihSVHLktoX+RMQj8dNrBJBj/5ASXeUDKx1bEP9aA==}
+    deprecated: This package has been deprecated in favor of the standard 'gsap' package available in the public npmjs repository which now includes all bonus plugins.
+
   gsap@3.13.0:
     resolution: {integrity: sha512-QL7MJ2WMjm1PHWsoFrAQH/J8wUeqZvMtHO58qdekHpCfhvhSL4gSiz6vJf5EeMP0LOn3ZCprL2ki/gjED8ghVw==}
 
@@ -2831,6 +2841,11 @@ packages:
     resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
     peerDependencies:
       react: ^19.1.1
+
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -4364,29 +4379,29 @@ snapshots:
       '@typescript-eslint/types': 8.39.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/browser-playwright@4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
+  '@vitest/browser-playwright@4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
     dependencies:
-      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       playwright: 1.56.1
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
     transitivePeerDependencies:
       - bufferutil
       - msw
       - utf-8-validate
       - vite
 
-  '@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
+  '@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
     dependencies:
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       '@vitest/utils': 4.0.8
       magic-string: 0.30.21
       pixelmatch: 7.1.0
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
       ws: 8.18.3
     transitivePeerDependencies:
       - bufferutil
@@ -4394,7 +4409,7 @@ snapshots:
       - utf-8-validate
       - vite
 
-  '@vitest/coverage-v8@4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)':
+  '@vitest/coverage-v8@4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
       '@vitest/utils': 4.0.8
@@ -4407,9 +4422,9 @@ snapshots:
       magicast: 0.5.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
     optionalDependencies:
-      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -4422,13 +4437,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))':
+  '@vitest/mocker@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))':
     dependencies:
       '@vitest/spy': 4.0.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vite: 7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
 
   '@vitest/pretty-format@4.0.8':
     dependencies:
@@ -5371,6 +5386,8 @@ snapshots:
 
   graphemer@1.4.0: {}
 
+  gsap-trial@3.13.0: {}
+
   gsap@3.13.0: {}
 
   handlebars@4.7.8:
@@ -6159,6 +6176,10 @@ snapshots:
       react: 19.1.1
       scheduler: 0.26.0
 
+  react-icons@5.5.0(react@19.1.1):
+    dependencies:
+      react: 19.1.1
+
   react-is@16.13.1: {}
 
   react-scroll-parallax@3.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
@@ -6834,7 +6855,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1):
+  vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6845,14 +6866,14 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.19.9
       fsevents: 2.3.3
-      jiti: 1.21.7
+      jiti: 2.6.1
       sass: 1.94.0
       terser: 5.44.1
 
-  vitest@4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1):
+  vitest@4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1):
     dependencies:
       '@vitest/expect': 4.0.8
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       '@vitest/pretty-format': 4.0.8
       '@vitest/runner': 4.0.8
       '@vitest/snapshot': 4.0.8
@@ -6869,11 +6890,11 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vite: 7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.19.9
-      '@vitest/browser-playwright': 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/browser-playwright': 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
     transitivePeerDependencies:
       - jiti
       - less
