@@ -4,7 +4,11 @@ import GlassSurface, {GlassSurfaceProps} from "@workspace/ui/components/ui/glass
 import {MetaBallsProps} from "@workspace/ui/types";
 import {useScrollToSection} from "@workspace/ui/hooks/useScrollToSection";
 import {AnimatedButton} from "@/components/ui/animated-button/animated-button";
+import {gsap, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
+
 import '../styles/hero.scss';
+import React from "react";
+import CSSMetaBalls from "@workspace/ui/components/reactbits/css-metaballs/CSSMetaBalls";
 
 export const Hero = () => {
     // for metaBalls type
@@ -12,13 +16,13 @@ export const Hero = () => {
         color: "#1e3a8a",
         cursorBallColor: "#2563eb",
         cursorBallSize: 4,
-        ballCount: 12,
-        animationSize: 14,
+        ballCount: 8,
+        animationSize: 12,
         enableMouseInteraction: true,
         enableTransparency: true,
-        hoverSmoothness: 0.05,
+        hoverSmoothness: 0.08,
         clumpFactor: 0.7,
-        speed: 0.3
+        speed: 0.25
     }
     const glassSurfaceProps: GlassSurfaceProps = {
         className: cn("px-10 py-10"),
@@ -28,18 +32,27 @@ export const Hero = () => {
         backgroundOpacity: 0.1,
         saturation: 1,
         borderWidth: 0.1,
-        brightness: 50,
+        brightness: 40,
         opacity: 0.93,
         blur: 11,
         displace: 3.3,
-        distortionScale: 300,
-        redOffset: 0,
-        greenOffset: 10,
-        blueOffset: 20
+        distortionScale: 180,
+        redOffset: 40,
+        greenOffset: 40,
+        blueOffset: 40
     }
 
 
     const handleScroll = useScrollToSection(100);
+
+
+
+    React.useEffect(()=>{
+        console.log(`[HERO] Compo mounted`);
+        console.log(`[HERO] GSAP version:`, gsap.version);
+        console.log(`[HERO] Active ScrillTriggers:`, ScrollTrigger.getAll().length);
+    },[])
+
 
     return (
         <section id="home" className={cn("metallic-bg flex flex-col items-center justify-start gap-12 relative" +
@@ -49,7 +62,9 @@ export const Hero = () => {
             <div className={cn(" absolute left-0 top-0 right-0 bottom-0 w-100vh h-100vh z-0 ")}>
                 {/* this should be background */}
                 {/*2563eb*/}
-                <FullMetaBalls {...metaBallsAttr} />
+                <FullMetaBalls
+                    {...metaBallsAttr}
+                />
             </div>
             {/* context area start here*/}
             <section className={cn("page-container h-[100vh] flex flex-col align-middle justify-center gap-8")}>

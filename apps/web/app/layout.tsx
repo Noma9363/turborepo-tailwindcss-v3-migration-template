@@ -20,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="ko" suppressHydrationWarning>
+        <html lang="ko" className="scroll-smooth" suppressHydrationWarning>
         <head>
             <meta name='darkreader-lock' content="" />
             <title>Joy Han</title>

@@ -1,9 +1,7 @@
 import React, { useEffect, useMemo, useRef, ReactNode, RefObject } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from '../../../utility/gsap/gsap-utils';
 import {ScrollFloatProps} from "@workspace/ui/interfaces/gsap";
 
-gsap.registerPlugin(ScrollTrigger);
 
 
 

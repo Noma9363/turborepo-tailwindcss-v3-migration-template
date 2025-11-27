@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText as GSAPSplitText } from 'gsap/SplitText';
-import { useGSAP } from '@gsap/react';
+import { SplitText as OriginGSAPSplitText } from 'gsap/SplitText';
+import {gsap, useGSAP, ScrollTrigger} from '../../../utility/gsap/gsap-utils';
 import {SplitTextProps} from "@workspace/ui/interfaces";
 
-gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
-
+if(typeof  window!== 'undefined'){
+    gsap.registerPlugin(OriginGSAPSplitText);
+}
 
 const SplitText: React.FC<SplitTextProps> = ({
   text,
@@ -41,7 +40,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
       const el = ref.current as HTMLElement & {
-        _rbsplitInstance?: GSAPSplitText;
+        _rbsplitInstance?: OriginGSAPSplitText;
       };
 
       if (el._rbsplitInstance) {
@@ -64,14 +63,14 @@ const SplitText: React.FC<SplitTextProps> = ({
             : `+=${marginValue}${marginUnit}`;
       const start = `top ${startPct}%${sign}`;
       let targets: Element[] = [];
-      const assignTargets = (self: GSAPSplitText) => {
-        if (splitType.includes('chars') && (self as GSAPSplitText).chars?.length)
-          targets = (self as GSAPSplitText).chars;
+      const assignTargets = (self: OriginGSAPSplitText) => {
+        if (splitType.includes('chars') && (self as OriginGSAPSplitText).chars?.length)
+          targets = (self as OriginGSAPSplitText).chars;
         if (!targets.length && splitType.includes('words') && self.words.length) targets = self.words;
         if (!targets.length && splitType.includes('lines') && self.lines.length) targets = self.lines;
         if (!targets.length) targets = self.chars || self.words || self.lines;
       };
-      const splitInstance = new GSAPSplitText(el, {
+      const splitInstance = new OriginGSAPSplitText(el, {
         type: splitType,
         smartWrap: true,
         autoSplit: splitType === 'lines',
@@ -79,7 +78,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         wordsClass: 'split-word',
         charsClass: 'split-char',
         reduceWhiteSpace: false,
-        onSplit: (self: GSAPSplitText) => {
+        onSplit: (self: OriginGSAPSplitText) => {
           assignTargets(self);
           return gsap.fromTo(
             targets,

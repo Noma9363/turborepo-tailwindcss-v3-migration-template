@@ -4,6 +4,7 @@ import React from "react";
 import {MetaBallsProps} from "@workspace/ui/types";
 import GlassSurface, {GlassSurfaceProps} from "@workspace/ui/components/ui/glass-surface/GlassSurface";
 import {FullMetaBalls} from "@workspace/ui/components/common";
+import CSSMetaBalls, {CSSMetaBallsProps} from "@workspace/ui/components/reactbits/css-metaballs/CSSMetaBalls";
 
 type BoxSize = {
     sm: 'w-12 h-12';
@@ -12,13 +13,12 @@ type BoxSize = {
 }
 
 interface IconBoxProps {
+
+    ref?: React.RefObject<HTMLDivElement | null>;
     size?: keyof BoxSize;
     className?: string;
     children: React.ReactNode;
-    metaBallsColorCfg?:{
-        color?: string,
-        cursorBallColor?: string;
-    }
+    metaBallsColorCfg?:CSSMetaBallsProps
 }
 
 export const IconBox = (
@@ -26,7 +26,8 @@ export const IconBox = (
         size = 'sm',
         className,
         children,
-        metaBallsColorCfg
+        metaBallsColorCfg,
+        ref
     }: IconBoxProps
 ) => {
     const sizeMap:BoxSize = {
@@ -39,7 +40,7 @@ export const IconBox = (
         // color: "#1e3a8a",
         // cursorBallColor: "#2563eb",
         color: metaBallsColorCfg?.color,
-        cursorBallColor: metaBallsColorCfg?.cursorBallColor,
+        cursorBallColor: metaBallsColorCfg?.backgroundColor,
         cursorBallSize: 2,
         ballCount: 8,
         animationSize: 8,
@@ -62,13 +63,14 @@ export const IconBox = (
         blur: 8,
         displace: 1.2,
         distortionScale: 182,
-        redOffset: 20,
-        greenOffset: 14,
-        blueOffset: 40
+        redOffset: 49,
+        greenOffset: 40,
+        blueOffset: 39
     }
 
     return (
         <div
+            ref={ref}
             className={cn(
                 sizeMap[size], " ",
                 className, " ",
@@ -81,8 +83,8 @@ export const IconBox = (
                 " rounded-[1.2rem] border-opacity-70"
             )}
         >
-            <FullMetaBalls
-                {...metaBallsAttr}
+            <CSSMetaBalls
+                {...metaBallsColorCfg}
             />
             <div className={cn("absolute w-full h-full top-0 bottom-0 right-0 left-0" +
                 " rounded overflow-hidden")}>

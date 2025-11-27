@@ -6,6 +6,7 @@ import {About} from "@/components/page/about";
 import {cn} from "@workspace/ui/lib/utils";
 import './page.scss';
 import {Projects} from "@/components/page/projects";
+import {ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 
 const Page = () => {
 

@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "sass:map";
+
 // _mixins.scss
 
 // Mobile View First
@@ -64,21 +66,21 @@
 }
 
 @mixin set-root-padding($breakpoint) {
-  padding-top: map-get($view-size-mobile, padding-top);
-  padding-bottom: map-get($view-size-mobile, padding-bottom);
+  padding-top: map.get($view-size-mobile, padding-top);
+  padding-bottom: map.get($view-size-mobile, padding-bottom);
 
   @include tablet-up{
-    padding-top: map-get($view-size-tablet, padding-top);
-    padding-bottom: map-get($view-size-tablet, padding-bottom);
+    padding-top: map.get($view-size-tablet, padding-top);
+    padding-bottom: map.get($view-size-tablet, padding-bottom);
   }
 
   @include laptop-up{
-    padding-top: map-get($view-size-laptop, padding-top);
-    padding-bottom: map-get($view-size-laptop, padding-bottom);
+    padding-top: map.get($view-size-laptop, padding-top);
+    padding-bottom: map.get($view-size-laptop, padding-bottom);
   }
 
   @include desktop-up{
-    padding-top: map-get($view-size-desktop, padding-top);
-    padding-bottom: map-get($view-size-desktop, padding-bottom);
+    padding-top: map.get($view-size-desktop, padding-top);
+    padding-bottom: map.get($view-size-desktop, padding-bottom);
   }
 }

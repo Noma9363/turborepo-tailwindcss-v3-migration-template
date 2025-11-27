@@ -1,5 +1,6 @@
 {
   "name": "@workspace/ui",
+  "main": "./src/index.ts",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -19,7 +20,9 @@
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-resizable-panels": "^3.0.6",
     "react-scroll-parallax": "^3.5.0",
+    "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1",
     "zod": "^3.25.76"
   },
@@ -28,6 +31,7 @@
     "@types/node": "^20.19.9",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
+    "@types/styled-components": "^5.1.36",
     "@vitest/browser-playwright": "^4.0.8",
     "@vitest/coverage-v8": "^4.0.8",
     "@workspace/eslint-config": "workspace:*",
@@ -54,7 +58,10 @@
     "./tailwind.config": "./tailwind.config.ts",
     "./postcss.config": "./postcss.config.mjs",
     "./lib/*": "./src/lib/*.ts",
-    "./lib/gsap-utils": "./src/lib/gsap-utils.ts",
+    "./utility/*": "./src/utility/*",
+    "./utility/gsap/gsap-utils": "./src/utility/gsap/gsap-utils.ts",
+    "./utility/gsap/helper/horizontalLoop": "./src/utility/gsap/helper/horizontalLoop.ts",
+    "./utility/gsap/helper/*": "./src/utility/gsap/helper/*",
     "./components/*": "./src/components/*.tsx",
     "./components/ui/*": "./src/components/ui/*.tsx",
     "./components/common/*": "./src/components/common/*.tsx",
@@ -62,11 +69,31 @@
     "./data/*": "./src/data/*.ts",
     "./interfaces": "./src/interfaces/index.ts",
     "./interfaces/*": "./src/interfaces/*/*.ts",
-    "./styles/*": "./src/styles/*.{css,sass,css}",
-    "./reactbits/*": "./src/components/reactbits/*.tsx",
+    "./styles/*": "./src/styles/*.{css,sass,scss}",
+    "./components/reactbits/*": "./src/components/reactbits/*.tsx",
     "./gsap/*": "./src/components/gsap/*.tsx",
     "./parallax": "./src/components/parallax/index.tsx",
     "./parallax/*": "./src/components/parallax/*.tsx",
-    "./icons": "./src/components/icons/index.ts"
+    "./icons": "./src/components/icons/index.ts",
+    "./components/reactbits/css-metaballs/CSSMetaBalls": "./src/components/reactbits/css-metaballs/CSSMetaBalls.tsx"
+  },
+  "typesVersions": {
+    "*": {
+      "lib/*": [
+        "./src/lib/*"
+      ],
+      "utility/*": [
+        "./src/utility/*"
+      ],
+      "utility/gsap/gsap-utils": [
+        "./src/utility/gsap/gsap-utils.ts"
+      ],
+      "utility/gsap/helper/*": [
+        "./src/utility/gsap/helper/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ]
+    }
   }
 }

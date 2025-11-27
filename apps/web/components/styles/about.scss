@@ -1,0 +1,45 @@
+.icon-bg{
+  --mask: linear-gradient(to left,
+          oklch(0.145 0 0 / 0.0) 0, oklch(.145 0 0 / 0.1) 20%,
+          oklch(.145 0 0 / 1) 75%, oklch(.145 0 0 / 1) 100%
+  ) 100% 50% / 100% 100% repeat-y;
+
+  --mask_opposit: linear-gradient(to right,
+          oklch(0.145 0 0 / 0.0) 0, oklch(.145 0 0 / 0.1) 20%,
+          oklch(.145 0 0 / 1) 75%, oklch(.145 0 0 / 1) 100%
+  ) 100% 50% / 100% 100% repeat-y;
+
+  position: relative;
+
+
+  &:before{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: -3rem;
+    bottom: 0;
+    left: 0;
+    width: 28rem;
+    height: calc(100% + 5rem);
+    background: oklch(.145 0 0);
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+  &:after{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: -3rem;
+    bottom: 0;
+    right: 0;
+    width: 28rem;
+    height: calc(100% + 5rem);
+    background: oklch(.145 0 0);
+
+    -webkit-mask: var(--mask_opposit);
+    mask: var(--mask_opposit);
+  }
+}

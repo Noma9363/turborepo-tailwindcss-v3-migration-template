@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, ReactNode } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {gsap, useGSAP, ScrollTrigger} from '../../../utility/gsap/gsap-utils';
 import {AnimatedContentProps} from "@workspace/ui/interfaces/gsap/animated-context";
 
 gsap.registerPlugin(ScrollTrigger);
