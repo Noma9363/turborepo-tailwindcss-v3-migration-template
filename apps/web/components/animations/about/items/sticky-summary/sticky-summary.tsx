@@ -5,6 +5,13 @@ import {IconBox} from "@/components/ui/icon-box/icon-box";
 import {gsap, useGSAP, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 import {cn} from "@workspace/ui/lib/utils";
 import {gsapItemProps} from "@/interfaces/page/about/sticky-scroll-interface.interfeac";
+import {
+    blockquoteTypo,
+    h3Typo,
+    inlineCodeTypo,
+    pTypo,
+    smallTypo
+} from "@workspace/ui/components/ui/tailwind-variations";
 
 
 export default function StickySummary(
@@ -205,22 +212,21 @@ export default function StickySummary(
         <div
             ref={panelRef}
             className={cn("panel--area h-screen " +
-                "grid grid-cols-8 items-start align-top gap-0 "
+                "grid grid-cols-10 items-start align-top gap-0 "
             )}
         >
-            <div ref={asideLeftRef} className="aside col-start-1 col-end-4
+            <div ref={asideLeftRef} className="aside col-start-2 col-end-5
             aside--left opacity-0 ">
-                <div className="flex flex-col h-full justify-center justify-end pl-8 text-end ">
-                    <h2 className={cn("text-3xl " +
-                        defaultFontStyles)}>
+                <div className="flex flex-col h-full justify-center pl-8 text-end ">
+                    <h2 className={cn(h3Typo)}>
                         {leftAside.title}
                     </h2>
-                    <p className={cn("text-sm w-full break-words ")}>
+                    <p className={cn(pTypo + " text-sm break-words ")}>
                         {leftAside.sub}
                     </p>
                 </div>
             </div>
-            <div className={cn("col-start-4 col-end-6 flex w-full justify-center items-center " +
+            <div className={cn("col-start-5 col-end-7 flex w-full justify-center items-center " +
                 "flex-shrink-0")}>
                 <IconBox
                     ref={boxRef}
@@ -233,10 +239,10 @@ export default function StickySummary(
                     <Icon size={44} style={iconCfg.style}/>
                 </IconBox>
             </div>
-            <div ref={asideRightRef} className="aside col-start-6 col-end-9
-            aside--right opacity-0 pt-1.5">
+            <div ref={asideRightRef} className="aside col-start-7 col-end-10
+            aside--right opacity-0">
                 <div className="flex flex-col justify-start items-start">
-                    <h3 className={cn(defaultFontStyles + " text-sm break-words pr-3")}>
+                    <h3 className={cn(smallTypo + " leading-snug")}>
                         {rightAside.summary}
                     </h3>
                 </div>

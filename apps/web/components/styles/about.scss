@@ -1,3 +1,7 @@
+@use "@workspace/ui/styles/globals" as *;
+@use "@workspace/ui/styles/variables" as *;
+@use "@workspace/ui/styles/mixins" as *;
+
 .icon-bg{
   --mask: linear-gradient(to left,
           oklch(0.145 0 0 / 0.0) 0, oklch(.145 0 0 / 0.1) 20%,
@@ -43,3 +47,12 @@
     mask: var(--mask_opposit);
   }
 }
+
+
+.page-container{
+  @include responsive-container;
+  @include resize-root-padding;
+}
+
+/* in 2k monitor */
+//max-width: 1232px;

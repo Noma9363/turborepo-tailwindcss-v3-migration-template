@@ -10,21 +10,28 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {ResizeHandle} from "next/dist/next-devtools/dev-overlay/components/devtools-panel/resize/resize-handle";
 import {ResizableHandle, ResizablePanel, ResizablePanelGroup} from "@workspace/ui/components/ui/resizable";
 import {InformationModule} from "@/components/animations/about/information/information";
+import {
+    blockquoteTypo,
+    h1Typo,
+    h2Typo,
+    inlineCodeTypo,
+    leadTypo,
+    pTypo
+} from "@workspace/ui/components/ui/tailwind-variations"
 
 export const About = () => {
 
 
 
     return (
-        <div id="about" className="flex flex-col items-center justify-center min-h-screen w-full ">
+        <div id="about" className=" flex flex-col items-center justify-center min-h-screen w-full ">
             <section className={cn("page-container " + "w-full flex flex-col align-middle items-center justify-start" +
                 " h-full")}
             >
                 <SplitText
                     text="SEND HELP"
                     delay={250}
-                    duration={0.6}
-                    className="text-6xl font-semibold"
+                    className={cn(h2Typo)}
                 />
             </section>
 
@@ -35,29 +42,32 @@ export const About = () => {
             <section className={cn("pb-12 flex flex-col justify-center items-center")}>
                 <SplitText
                     text="[Core Stack.]"
-                    className={cn(" pb-8 scroll-m-20 text-center text-6xl font-bold" +
-                    " tracking-tight")}
+                    delay={200}
+                    className={cn("" + h2Typo)}
                 />
-                <p className={cn("scroll-m-20 text-center text-md font-semibold")}>kill me.</p>
-
+                <div className="pb-12"></div>
                 <HorizontalScroll/>
-                <Card className={cn("bg-primary-foreground px-4 py-4 w-4/5 mx-auto border-accent-foreground")} >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto deserunt dignissimos dolores eius, enim fuga maiores minus quisquam recusandae soluta veritatis voluptate. Accusantium fugiat pariatur quibusdam sit totam.
-                </Card>
+                <div className="page-container">
+                    <Card variant="glass" className={cn(" px-4 " + pTypo)}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto deserunt dignissimos dolores eius, enim fuga maiores minus quisquam recusandae soluta veritatis voluptate. Accusantium fugiat pariatur quibusdam sit totam.
+                    </Card>
+                </div>
             </section>
             {/* section-3 */}
-            <section className={cn("w-full flex flex-col items-center justify-stretch")}>
+            <section className={cn("page-container w-full flex flex-col items-center justify-stretch")}>
                 <SplitText
                     text="[TMI.]"
                     tag="h2"
-                    className={cn("w-full mr-auto pb-8 scroll-m-20 text-center text-6xl font-bold tracking-tight")}
+                    className={cn("w-fit mx-auto " + h2Typo)}
                     delay={200}
                 />
-
+                <div className="pb-40"></div>
                 {/**/}
 
                 {/**/}
                 <InformationModule/>
+
+
             </section>
 
         </div>

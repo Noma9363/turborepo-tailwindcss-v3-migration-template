@@ -1,0 +1,11 @@
+export const h1Typo = "scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance";
+export const h2Typo = "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0";
+export const h3Typo = "scroll-m-20 text-2xl font-semibold tracking-tight";
+export const h4Typo = "scroll-m-20 text-xl font-semibold tracking-tight";
+export const pTypo = "leading-7";
+export const blockquoteTypo = "mt-6 border-l-2 pl-6 italic";
+export const inlineCodeTypo = "bg-muted relative rounded px-[0.4rem] py-[0.2rem] font-mono text-sm font-light fit-co";
+export const leadTypo = "text-muted-foreground text-xl";
+export const largeTypo = "text-lg font-semibold";
+export const smallTypo = "text-sm leading-none font-medium";
+export const mutedTypo = "text-muted-foreground text-sm";

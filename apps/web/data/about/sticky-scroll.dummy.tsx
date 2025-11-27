@@ -23,7 +23,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             sub: 'Hypertext Markup Language'
         },
         rightAside:{
-            summary:'basic building block of the Web.'
+            summary:'basic building block \n of the Web.'
         }
     },
     {
@@ -119,7 +119,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             sub: 'Programming Language for the Web.'
         },
         rightAside:{
-            summary:'console.log("Foo" == "Bar");'
+            summary:'console.log("hello...!");'
         }
     },
     {
@@ -143,7 +143,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             sub: 'Type-Safe JavaScript.'
         },
         rightAside:{
-            summary:'console.log("Foo" !== "Bar");'
+            summary:`typeof "Foo" === "string"`
         }
     },
     {

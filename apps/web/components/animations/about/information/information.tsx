@@ -1,147 +1,122 @@
 "use client";
 
-import {ResizableHandle, ResizablePanel, ResizablePanelGroup} from "@workspace/ui/components/ui/resizable";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
 import {cn} from "@workspace/ui/lib/utils";
-import React from "react";
-import './indormation.scss';
+import React, {CSSProperties} from "react";
 import imgUrl from '@workspace/assets/pic_temp.png';
 import Image from "next/image";
-import GlassSurface, {GlassSurfaceProps} from "@workspace/ui/components/ui/glass-surface/GlassSurface";
-import {useGSAP} from "@workspace/ui/utility/gsap/gsap-utils";
+import {gsap, useGSAP} from "@workspace/ui/utility/gsap/gsap-utils";
+import './indormation.scss';
+import {h2Typo, h3Typo, leadTypo, pTypo, smallTypo} from "@workspace/ui/components/ui/tailwind-variations";
 
 export const InformationModule = () => {
-    // ref
-    const panelRef = React.useRef<HTMLDivElement>(null);
-    const cardRef = React.useRef<HTMLDivElement>(null);
+    const containerRef = React.useRef<HTMLDivElement>(null);
 
-    // animation
-    useGSAP(
-        ()=>{
-            // set null check
-            if(!panelRef.current || !cardRef.current){
-                return; // case false: escape
-            }
-            // success case: initializing animation
-            const penalEl = panelRef.current;
-            const cardEl = cardRef.current;
-        }
-    )
+    const commonCardStyle = ""
 
-    const glassCfg: GlassSurfaceProps = {
-        width: "100%",
-        height: "100%",
-        borderRadius: 16,
-        backgroundOpacity: 0.1,
-        saturation: 1,
-        borderWidth: 0.07,
-        brightness: 20,
-        opacity: 0.9,
-        blur: 10,
-        displace: 1.2,
-        distortionScale: 100,
-        redOffset: 15,
-        greenOffset: 34,
-        blueOffset: 60,
-        className: "p-12 absolute left-0 top-0 right-0 bottom-0 w-[80%] h-[80%]"
-    }
+    useGSAP(() => {
+        if (!containerRef.current) return;
 
+        // Animate the inner content, not the grid items
+        const cards = containerRef.current.querySelectorAll('[data-speed]');
+
+        cards.forEach((card) => {
+            const htmlCard = card as HTMLElement;
+            const inner = htmlCard.querySelector('.card-parallax-inner') as HTMLElement;
+            if (!inner) return;
+
+            const speedAttr = htmlCard.getAttribute('data-speed') || '1';
+            const speed = parseFloat(speedAttr.replace(/clamp\(|\)/g, ''));
+
+            const yMove = (1 - speed) * 320;
+
+            gsap.fromTo(inner,
+                {
+                    y: -yMove,
+
+                },
+                {
+                    y: yMove,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: htmlCard, // Trigger on card
+                        start: 'center bottom-=10%',
+                        end: 'center bottom-=10%',
+                        scrub: 0.1,
+                        invalidateOnRefresh: true,
+                        markers: true
+                    }
+                }
+            );
+        });
+
+    }, {
+        scope: containerRef,
+        dependencies: [],
+        revertOnUpdate: true
+    });
 
     return (
-        <div
-            className={cn("parent")}
-            ref={panelRef}
-        >
-            <Card
-                ref={cardRef}
-                className={cn("cont flex flex-col justify-stretch items-start relative cont__1 h-full" +
-                    " bg-primary-foreground" +
-                    " shadow-card-foreground" +
-                    " border-primary-foreground " +
-                    " overflow-hidden ")}
-            >
-                <CardHeader className="relative">
-                    <CardTitle className={cn()}>
-                        <h2 className={cn("scroll-m-20 text-start text-6xl font-bold tracking-tight  ")}>
-                            Blabla.
-                        </h2>
-                    </CardTitle>
-                    <CardDescription className="relative">
-                        Again
-                    </CardDescription>
-                </CardHeader>
-                <CardContent className={cn("overflow-hidden h-full")}>
-                    <Image width={128} height={128} className={cn("thumbnail ")} src={imgUrl} alt="hi"/>
-                </CardContent>
-                <CardFooter className="relative">
-                    kill me.
-                </CardFooter>
-            </Card>
-            <Card className={cn("cont cont__2 w-full h-full bg-primary-foreground shadow-card-foreground ")}>
-                <CardHeader>
-                    <CardTitle>
-                        cont 2
-                    </CardTitle>
-                    <CardDescription>
-                        Desc
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    ...content...
-                </CardContent>
-                <CardFooter>
-                    footer
-                </CardFooter>
-            </Card>
-            <Card className={cn("cont cont__3 w-full h-full bg-primary-foreground shadow-card-foreground ")}>
-                <CardHeader>
-                    <CardTitle>
-                        cont 3
-                    </CardTitle>
-                    <CardDescription>
-                        Desc
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    ...content...
-                </CardContent>
-                <CardFooter>
-                    footer
-                </CardFooter>
-            </Card>
-            <Card className={cn("cont cont__4 w-full h-full bg-primary-foreground shadow-card-foreground ")}>
-                <CardHeader>
-                    <CardTitle>
-                        cont 4
-                    </CardTitle>
-                    <CardDescription>
-                        Desc
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    ...content...
-                </CardContent>
-                <CardFooter>
-                    footer
-                </CardFooter>
-            </Card>
-            <Card className={cn("cont cont__5 w-full h-full bg-primary-foreground shadow-card-foreground ")}>
-                <CardHeader>
-                    <CardTitle>
-                        cont 5
-                    </CardTitle>
-                    <CardDescription>
-                        Desc
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    ...content...
-                </CardContent>
-                <CardFooter>
-                    footer
-                </CardFooter>
-            </Card>
+        <div className={cn("parent")} ref={containerRef}>
+            <div data-speed="1.2" className="cont cont__1 h-full ">
+                <Card
+                    variant="glass"
+                    className={cn("w-full h-full card-parallax-inner overflow-hidden")}
+                >
+                    <CardHeader className="relative justify-start gap-0">
+                        <CardTitle className={cn(h3Typo)}>
+                                Eyyy.
+                        </CardTitle>
+                        <CardDescription className={cn(pTypo + " h-fit")}>
+                            Again
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className={cn("absolute w-full h-full p-0 top-0 right-0 bottom-0 left-0")}>
+                        <Image className={cn("thumbnail")} src={imgUrl} alt="hi"/>
+                    </CardContent>
+                </Card>
+            </div>
+            <div data-speed="1.2" className="cont cont__2 w-full h-full">
+                <Card variant="glass" className={cn("card-parallax-inner w-full h-full")}>
+                    <CardHeader className="justify-start gap-0">
+                        <CardTitle className={cn(h3Typo)}>Name val</CardTitle>
+                        <CardDescription className={cn(pTypo + " h-fit")}>occupied</CardDescription>
+                    </CardHeader>
+                    <CardContent className={cn(smallTypo + " leading-snug")}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</CardContent>
+                </Card>
+            </div>
+            <div data-speed="1.2" className={cn("cont cont__3 h-full")}>
+                <Card variant="glass" className="card-parallax-inner w-full h-full">
+                    <CardHeader className="justify-start gap-0">
+                        <CardTitle className={cn(h3Typo)}>Priority</CardTitle>
+                        <CardDescription className={cn(pTypo + " h-fit")}>what's crucial</CardDescription>
+                    </CardHeader>
+                    <CardContent className={cn(smallTypo + " leading-snug")}>
+                        blabla describe here blabla..
+                    </CardContent>
+                </Card>
+            </div>
+            <div data-speed="1.2" className={cn("cont cont__4 w-full h-full")}>
+                <Card
+                    variant="glass"
+                    className="card-parallax-inner w-full h-full">
+                    <CardHeader className="justify-start gap-0">
+                        <CardTitle className={cn(h3Typo)}>Soon</CardTitle>
+                        <CardDescription className={cn(pTypo + " h-fit")}>Soooooooooooo...</CardDescription>
+                    </CardHeader>
+                    <CardContent className={cn(smallTypo + " leading-snug")}>idk</CardContent>
+                </Card>
+            </div>
+            <div data-speed="1.2" className={cn("cont cont__5 w-full h-full")}>
+                <Card
+                    variant="glass"
+                    className="card-parallax-inner w-full h-full">
+                    <CardHeader className="justify-start gap-0">                        <CardTitle className={cn(h3Typo)}>etc.</CardTitle>
+                        <CardDescription className={cn(pTypo  + " h-fit")}>huh?</CardDescription>
+                    </CardHeader>
+                    <CardContent className={cn(smallTypo + " leading-snug")}>etc context here</CardContent>
+                </Card>
+            </div>
         </div>
-
-    )
+    );
 }
