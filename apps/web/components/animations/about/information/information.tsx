@@ -7,12 +7,10 @@ import imgUrl from '@workspace/assets/pic_temp.png';
 import Image from "next/image";
 import {gsap, useGSAP} from "@workspace/ui/utility/gsap/gsap-utils";
 import './indormation.scss';
-import {h2Typo, h3Typo, leadTypo, pTypo, smallTypo} from "@workspace/ui/components/ui/tailwind-variations";
+import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 
 export const InformationModule = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
-
-    const commonCardStyle = ""
 
     useGSAP(() => {
         if (!containerRef.current) return;
@@ -64,10 +62,10 @@ export const InformationModule = () => {
                     className={cn("w-full h-full card-parallax-inner overflow-hidden")}
                 >
                     <CardHeader className="relative justify-start gap-0">
-                        <CardTitle className={cn(h3Typo)}>
+                        <CardTitle className={cn(typography.h3Typo)}>
                                 Eyyy.
                         </CardTitle>
-                        <CardDescription className={cn(pTypo + " h-fit")}>
+                        <CardDescription className={cn(typography.pTypo + " h-fit")}>
                             Again
                         </CardDescription>
                     </CardHeader>
@@ -79,19 +77,19 @@ export const InformationModule = () => {
             <div data-speed="1.2" className="cont cont__2 w-full h-full">
                 <Card variant="glass" className={cn("card-parallax-inner w-full h-full")}>
                     <CardHeader className="justify-start gap-0">
-                        <CardTitle className={cn(h3Typo)}>Name val</CardTitle>
-                        <CardDescription className={cn(pTypo + " h-fit")}>occupied</CardDescription>
+                        <CardTitle className={cn(typography.h3Typo)}>Name val</CardTitle>
+                        <CardDescription className={cn(typography.pTypo + " h-fit")}>occupied</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(smallTypo + " leading-snug")}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</CardContent>
+                    <CardContent className={cn(typography.smallTypo + " leading-snug")}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</CardContent>
                 </Card>
             </div>
             <div data-speed="1.2" className={cn("cont cont__3 h-full")}>
                 <Card variant="glass" className="card-parallax-inner w-full h-full">
                     <CardHeader className="justify-start gap-0">
-                        <CardTitle className={cn(h3Typo)}>Priority</CardTitle>
-                        <CardDescription className={cn(pTypo + " h-fit")}>what's crucial</CardDescription>
+                        <CardTitle className={cn(typography.h3Typo)}>Priority</CardTitle>
+                        <CardDescription className={cn(typography.pTypo + " h-fit")}>what's crucial</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(smallTypo + " leading-snug")}>
+                    <CardContent className={cn(typography.smallTypo + " leading-snug")}>
                         blabla describe here blabla..
                     </CardContent>
                 </Card>
@@ -101,20 +99,20 @@ export const InformationModule = () => {
                     variant="glass"
                     className="card-parallax-inner w-full h-full">
                     <CardHeader className="justify-start gap-0">
-                        <CardTitle className={cn(h3Typo)}>Soon</CardTitle>
-                        <CardDescription className={cn(pTypo + " h-fit")}>Soooooooooooo...</CardDescription>
+                        <CardTitle className={cn(typography.h3Typo)}>Soon</CardTitle>
+                        <CardDescription className={cn(typography.pTypo + " h-fit")}>Soooooooooooo...</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(smallTypo + " leading-snug")}>idk</CardContent>
+                    <CardContent className={cn(typography.smallTypo + " leading-snug")}>idk</CardContent>
                 </Card>
             </div>
             <div data-speed="1.2" className={cn("cont cont__5 w-full h-full")}>
                 <Card
                     variant="glass"
                     className="card-parallax-inner w-full h-full">
-                    <CardHeader className="justify-start gap-0">                        <CardTitle className={cn(h3Typo)}>etc.</CardTitle>
-                        <CardDescription className={cn(pTypo  + " h-fit")}>huh?</CardDescription>
+                    <CardHeader className="justify-start gap-0">                        <CardTitle className={cn(typography.h3Typo)}>etc.</CardTitle>
+                        <CardDescription className={cn(typography.pTypo  + " h-fit")}>huh?</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(smallTypo + " leading-snug")}>etc context here</CardContent>
+                    <CardContent className={cn(typography.smallTypo + " leading-snug")}>etc context here</CardContent>
                 </Card>
             </div>
         </div>

@@ -7,16 +7,9 @@ import StickyScroll from "@/components/animations/about/sticky-scroll/sticky-scr
 import HorizontalScroll from "@/components/animations/about/horizontal-scroll/horizontal-scroll";
 import '../styles/about.scss';
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
-import {ResizeHandle} from "next/dist/next-devtools/dev-overlay/components/devtools-panel/resize/resize-handle";
-import {ResizableHandle, ResizablePanel, ResizablePanelGroup} from "@workspace/ui/components/ui/resizable";
 import {InformationModule} from "@/components/animations/about/information/information";
 import {
-    blockquoteTypo,
-    h1Typo,
-    h2Typo,
-    inlineCodeTypo,
-    leadTypo,
-    pTypo
+    typography
 } from "@workspace/ui/components/ui/tailwind-variations"
 
 export const About = () => {
@@ -31,7 +24,7 @@ export const About = () => {
                 <SplitText
                     text="SEND HELP"
                     delay={250}
-                    className={cn(h2Typo)}
+                    className={cn(typography.h2Typo)}
                 />
             </section>
 
@@ -43,12 +36,12 @@ export const About = () => {
                 <SplitText
                     text="[Core Stack.]"
                     delay={200}
-                    className={cn("" + h2Typo)}
+                    className={cn("" + typography.h2Typo)}
                 />
                 <div className="pb-12"></div>
                 <HorizontalScroll/>
                 <div className="page-container">
-                    <Card variant="glass" className={cn(" px-4 " + pTypo)}>
+                    <Card variant="glass" className={cn(" px-4 " + typography.pTypo)}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto deserunt dignissimos dolores eius, enim fuga maiores minus quisquam recusandae soluta veritatis voluptate. Accusantium fugiat pariatur quibusdam sit totam.
                     </Card>
                 </div>
@@ -58,7 +51,7 @@ export const About = () => {
                 <SplitText
                     text="[TMI.]"
                     tag="h2"
-                    className={cn("w-fit mx-auto " + h2Typo)}
+                    className={cn("w-fit mx-auto " + typography.h2Typo)}
                     delay={200}
                 />
                 <div className="pb-40"></div>
@@ -66,8 +59,6 @@ export const About = () => {
 
                 {/**/}
                 <InformationModule/>
-
-
             </section>
 
         </div>

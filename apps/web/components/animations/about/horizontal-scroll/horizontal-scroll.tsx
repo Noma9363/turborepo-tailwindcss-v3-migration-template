@@ -45,7 +45,7 @@ export default function HorizontalScroll() {
     return (
         <div
             ref={panelRef}
-            className={cn("w-screen mx-auto flex justify-center overflow-x-hidden h-fit py-12")}
+            className={cn("w-screen  flex justify-center overflow-x-hidden h-fit py-12")}
         >
             {/* infinite horizontal loop area */}
             <div className={cn("w-fit flex relative justify-center mx-auto icon-bg")}>

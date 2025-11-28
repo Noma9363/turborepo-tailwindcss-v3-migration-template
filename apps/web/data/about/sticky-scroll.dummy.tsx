@@ -43,7 +43,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             contrastAmount: 1.2
         },
         leftAside:{
-            title: 'Css3',
+            title: 'CSS3',
             sub: 'Cascading Style Sheets Level 3'
         },
         rightAside:{

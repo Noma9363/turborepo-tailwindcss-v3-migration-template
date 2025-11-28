@@ -50,8 +50,23 @@ export const Hero = () => {
     React.useEffect(()=>{
         console.log(`[HERO] Compo mounted`);
         console.log(`[HERO] GSAP version:`, gsap.version);
-        console.log(`[HERO] Active ScrillTriggers:`, ScrollTrigger.getAll().length);
-    },[])
+        const allTriggers = ScrollTrigger.getAll();
+        console.log(`[HERO] Active ScrillTriggers:`, allTriggers.length);
+
+        // group triggers by component
+        const triggerByType = allTriggers.reduce((acc, trigger)=>{
+            const triggerEle = trigger.trigger;
+            const className = triggerEle?.className || 'unknown';
+            const key =  className.includes('panel--area') ? 'StickySummary' :
+                                className.includes('hero') ? 'Hero' :
+                                className.includes('horizontal') ? 'HorizontalScroll' : 'Other';
+            acc[key] = (acc[key] || 0) + 1;
+            return acc;
+        }, {} as Record<string, number>)
+
+        console.log(`[HERO] Triggers by component: ${triggerByType}`);
+
+    },[]);
 
 
     return (

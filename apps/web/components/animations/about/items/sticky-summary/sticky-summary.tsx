@@ -6,11 +6,7 @@ import {gsap, useGSAP, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-util
 import {cn} from "@workspace/ui/lib/utils";
 import {gsapItemProps} from "@/interfaces/page/about/sticky-scroll-interface.interfeac";
 import {
-    blockquoteTypo,
-    h3Typo,
-    inlineCodeTypo,
-    pTypo,
-    smallTypo
+    typography
 } from "@workspace/ui/components/ui/tailwind-variations";
 
 
@@ -30,6 +26,8 @@ export default function StickySummary(
     const asideLeftRef = React.useRef<HTMLDivElement>(null);
     const asideRightRef = React.useRef<HTMLDivElement>(null);
 
+    // Store triggers for proper cleanup
+    const triggersRef = React.useRef<ScrollTrigger[]>([]);
     // icon component
     const Icon = iconCfg.icon;
 
@@ -38,10 +36,12 @@ export default function StickySummary(
         () => {
             // set aside elements
             // null|undefined check
-            if(!panelRef.current || !boxRef.current || !asideLeftRef.current || !asideRightRef.current){
+            if (!panelRef.current || !boxRef.current || !asideLeftRef.current || !asideRightRef.current) {
                 console.warn('Required elements not found');
-                return ;
+                return;
             }
+
+
             const parentPenal = panelRef.current;
             const pinBoxEl = boxRef.current;
             const pinContextElLeft = asideLeftRef.current;
@@ -50,163 +50,172 @@ export default function StickySummary(
             // calculating
             const parentHeight = parentPenal.offsetHeight;
             const boxHeight = pinBoxEl.offsetHeight;
-            const leftHeight = pinContextElLeft.offsetHeight;
-            const rightHeight = pinContextElRight.offsetHeight;
+
+            // Clear previous triggers
+            console.log(`[STICKY] cleaning up ${triggersRef.current.length} old triggers`)
+            triggersRef.current.forEach(t => t.kill());
+            triggersRef.current = [];
+
 
             // Animation 1: box pin animation
-            gsap.timeline({
-                scrollTrigger: {
+            triggersRef.current.push(
+                ScrollTrigger.create({
                     trigger: pinBoxEl,
                     start: `center+=${boxHeight} center`,
                     end: `${(parentHeight - (boxHeight / 2))} center-=${boxHeight}`,
-                    markers: isDev && {
-                        startColor: 'green',
-                        endColor: '#731D1DFF'
-                    },
-                    toggleActions: '',
                     pin: true,
                     pinSpacing: false,
-                    scrub: 1
-                }
-            });
-            // Animation 2: fade in
-            gsap.timeline({
+                    scrub: true,
+                })
+            );
+
+            // Left-Animation (for pinContextElLeft): context pin animation
+            triggersRef.current.push(
+                ScrollTrigger.create({
+                    trigger: pinContextElLeft,
+                    start: `center+=${boxHeight} center`,
+                    end: `${(parentHeight - (boxHeight / 2))} center-=${boxHeight}`,
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true
+                })
+            );
+
+            // Right Animation ver
+            triggersRef.current.push(
+                ScrollTrigger.create({
+                    trigger: pinContextElRight,
+                    start: `center+=${boxHeight} center`,
+                    end: `${(parentHeight - (boxHeight / 2))} center-=${boxHeight}`,
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true
+                })
+            );
+
+            /** Box Fade In */
+            const boxFadeInTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: pinBoxEl,
                     start: `bottom-=${parentHeight * 0.4} center`,
                     end: `bottom-=${parentHeight * 0.2} center`,
-                    scrub: 1
+                    scrub: 1,
+                    markers: isDev
                 }
-            }).to(pinBoxEl,{
-                opacity: 1,
-                duration: 1
             });
-            // Animation 3: fade out
-            gsap.timeline({
+            boxFadeInTrEle.fromTo(
+                pinBoxEl,
+                {opacity:0},
+                {opacity:1, duration: 1}
+            );
+            triggersRef.current.push(boxFadeInTrEle.scrollTrigger!);
+            /** Box Fade Out */
+            const boxFadeOutTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: pinBoxEl,
                     start: `top+=${parentHeight * 0.2} center`,
                     end: `top+=${parentHeight * 0.4} center`,
-                    scrub:1
-                }
-            }).to(pinBoxEl, {
-                opacity: 0,
-                duration: 1
-            })
-
-            // ----
-
-            // Animation 1(for pinContextElLeft): context pin animation
-            gsap.timeline({
-                /* Animate <Aside> "Left Pin" effect */
-                scrollTrigger: {
-                    trigger: pinContextElLeft,
-                    start: `center+=${boxHeight} center`,
-                    end: ()=> `${(parentHeight - (boxHeight / 2))} center-=${boxHeight}`,
-                    toggleActions: '',
-                    markers: isDev && {
-                        startColor: 'purple',
-                        endColor: 'orange'
-                    },
-                    pin: true,
-                    pinSpacing: false,
-                    scrub: 1
+                    scrub: 1,
+                    markers: true
                 }
             });
-            // <AsideLeft> "FadeIn" at the beginning of parent
-            gsap.timeline({
-                /* Animate <Aside> "Left Fade In" effect */
+            boxFadeOutTrEle.to(
+                pinBoxEl,
+                {opacity:0, duration: 1}
+            );
+            triggersRef.current.push(boxFadeOutTrEle.scrollTrigger!);
+            /** .. */
+
+            /** Aside["Left"] Fade In */
+            const asideLeftFadeInTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
                     start: `top+=${parentHeight * 0.2} center`,
                     end: `top+=${parentHeight * 0.4} center`,
                     scrub: 1,
-                    markers: isDev &&{
-                        startColor: 'hotpink',
-                        endColor: 'skyblue'
-                    }
+                    markers: isDev
                 }
-            }).fromTo(pinContextElLeft,
-                { autoAlpha: 0 },
-                { autoAlpha: 1, duration: 1}
-            )
+            });
+            asideLeftFadeInTrEle.fromTo(
+                pinContextElLeft,
+                {opacity:0},
+                {opacity:1, duration: 1}
+            );
+            triggersRef.current.push(asideLeftFadeInTrEle.scrollTrigger!);
 
-            // <AsideLeft> "FadOut" at the beginning of parent
-            gsap.timeline({
+            /** Aside["Left"] Fade Out */
+            const asideLeftFadeOutTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `bottom-=${parentHeight * 0.2} center`,
-                    end: `bottom center`,
-                    scrub:1,
-                    markers: isDev &&{
-                        startColor: 'yellow',
-                        endColor: 'red'
-                    }
+                    start: `bottom-=${parentHeight * 0.4} center`,
+                    end: `bottom-=${parentHeight * 0.2} center`,
+                    scrub: 1,
+                    markers: isDev
                 }
-            }).to(pinContextElLeft, {
-                autoAlpha: 0,
-                duration: 1
             });
+            asideLeftFadeOutTrEle.to(
+                [pinContextElLeft],
+                {opacity:0, duration: 1}
+            );
+            triggersRef.current.push(asideLeftFadeOutTrEle.scrollTrigger!);
 
-
-            /** ---- **/
-            // Right ver
-            gsap.timeline({
-                /* Animate <Aside> "Right Pin" effect */
-                scrollTrigger: {
-                    trigger: pinContextElRight,
-                    start: `center+=${boxHeight} center`,
-                    end: ()=> `${(parentHeight - (boxHeight / 2))} center-=${boxHeight}`,
-                    toggleActions: '',
-                    pin: true,
-                    pinSpacing: false,
-                    scrub: 1
-                }
-            })
-            // Right "fade-in" version
-            gsap.timeline({
-                /* Animate <Aside> "Right Fade In" effect */
+            /** Aside["Right"] Fade In */
+            const asideRightFadeInTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
                     start: `top+=${parentHeight * 0.2} center`,
                     end: `top+=${parentHeight * 0.4} center`,
-                    scrub: 1
+                    scrub: 1,
+                    markers: isDev
                 }
-            }).fromTo(pinContextElRight,
-                {
-                    autoAlpha: 0
-                },
-
-                {
-                autoAlpha: 1,
-                duration: 1
-                }
+            });
+            asideRightFadeInTrEle.fromTo(
+                pinContextElRight,
+                {opacity: 0},
+                {opacity: 1, duration: 1}
             );
-            gsap.timeline({
-                /* Animate Aside "Right Fade Out" effect */
+            triggersRef.current.push(asideRightFadeInTrEle.scrollTrigger!);
+
+
+            /** Aside["Right"] Fade Out */
+            const asideRightFadeOutTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `bottom-=${parentHeight * 0.2} center`,
-                    end: `bottom center`,
-                    scrub:1
+                    start: `bottom-=${parentHeight * 0.4} center`,
+                    end: `bottom-=${parentHeight * 0.2} center`,
+                    scrub: 1,
+                    markers: isDev
                 }
-            }).to(pinContextElRight, {
-                autoAlpha: 0,
-                duration: 1
-            })
+            });
+            asideRightFadeOutTrEle.to(
+                pinContextElRight,
+                {opacity:0, duration: 1}
+            );
+            triggersRef.current.push(asideRightFadeOutTrEle.scrollTrigger!);
 
-
-            // when animation end
-            return () => {
-                ScrollTrigger.getAll().forEach(t => t.kill())
+            console.log(`[STICKY] Created: ${triggersRef.current.length} triggers for ${leftAside.title}`)
+            // CleanUp Fn
+            return() => {
+                console.log(`[STICKY] useGsap cleanup - killing ${triggersRef.current.length} triggers for: ${leftAside.title}`)
+                triggersRef.current.forEach(t=>t.kill());
+                triggersRef.current = []
             }
-
-        },
+        }
+        ,
         {
             scope: panelRef,
             dependencies: [isDev]
         }
     )
+
+    // proper cleanup
+    React.useEffect(() => {
+        return () => {
+            console.log(`[STICKY] useEffect cleanup for : ${leftAside.title}`);
+            triggersRef.current.forEach(t => t.kill());
+            triggersRef.current = [];
+        }
+    }, [leftAside.title])
 
     return (
         <div
@@ -217,11 +226,11 @@ export default function StickySummary(
         >
             <div ref={asideLeftRef} className="aside col-start-2 col-end-5
             aside--left opacity-0 ">
-                <div className="flex flex-col h-full justify-center pl-8 text-end ">
-                    <h2 className={cn(h3Typo)}>
+                <div className="flex flex-col h-full justify-center pl-4 text-end ">
+                    <h2 className={cn(typography.h3Typo)}>
                         {leftAside.title}
                     </h2>
-                    <p className={cn(pTypo + " text-sm break-words ")}>
+                    <p className={cn(typography.pTypo + " text-sm text-pretty ")}>
                         {leftAside.sub}
                     </p>
                 </div>
@@ -231,7 +240,7 @@ export default function StickySummary(
                 <IconBox
                     ref={boxRef}
                     className="
-                    box--pin opacity-0 text-white "
+                    box--pin text-white opacity-0"
                     size={iconCfg.iconSize}
                     metaBallsColorCfg={metaBallsCfg}
                     data-speed="0.1"
@@ -242,7 +251,7 @@ export default function StickySummary(
             <div ref={asideRightRef} className="aside col-start-7 col-end-10
             aside--right opacity-0">
                 <div className="flex flex-col justify-start items-start">
-                    <h3 className={cn(smallTypo + " leading-snug")}>
+                    <h3 className={cn(typography.smallTypo + " leading-snug")}>
                         {rightAside.summary}
                     </h3>
                 </div>
