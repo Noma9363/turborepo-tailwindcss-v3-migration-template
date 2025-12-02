@@ -21,11 +21,16 @@ export const About = () => {
             <section className={cn("page-container " + "w-full flex flex-col align-middle items-center justify-start" +
                 " h-full")}
             >
-                <SplitText
-                    text="SEND HELP"
-                    delay={250}
-                    className={cn(typography.h2Typo)}
-                />
+                <h2
+                    className={cn( `${typography.h2Typo} w-full text-start`, )}
+                >
+                    About.
+                </h2>
+                <span
+                    className={cn(`${typography.leadTypo} w-full text-start`)}
+                >
+                    Front End Developer
+                </span>
             </section>
 
             <StickyScroll/>
@@ -34,10 +39,13 @@ export const About = () => {
 
             <section className={cn("pb-12 flex flex-col justify-center items-center")}>
                 <SplitText
+                    textAlign="start"
+                    tag="h3"
                     text="[Core Stack.]"
                     delay={200}
-                    className={cn("" + typography.h2Typo)}
+                    className={cn(typography.h2Typo + " w-full text-7xl")}
                 />
+
                 <div className="pb-12"></div>
                 <HorizontalScroll/>
                 <div className="page-container">
@@ -50,10 +58,14 @@ export const About = () => {
             <section className={cn("page-container w-full flex flex-col items-center justify-stretch")}>
                 <SplitText
                     text="[TMI.]"
-                    tag="h2"
-                    className={cn("w-fit mx-auto " + typography.h2Typo)}
-                    delay={200}
+                    textAlign="start"
+                    tag="h3"
+                    className={cn(typography.h2Typo + " text-6xl text-start w-full ")}
+                    delay={400}
                 />
+                <p className={cn(typography.leadTypo+ " text-start w-full")}>
+                    Info.
+                </p>
                 <div className="pb-40"></div>
                 {/**/}
 

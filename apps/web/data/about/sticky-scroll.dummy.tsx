@@ -20,10 +20,10 @@ export const StickyScrollDummy:gsapItemProps[] = [
         },
         leftAside:{
             title: 'Html5',
-            sub: 'Hypertext Markup Language'
+            sub: 'Markup Language'
         },
         rightAside:{
-            summary:'basic building block \n of the Web.'
+            summary:'<h1>headline</h1>'
         }
     },
     {
@@ -44,10 +44,10 @@ export const StickyScrollDummy:gsapItemProps[] = [
         },
         leftAside:{
             title: 'CSS3',
-            sub: 'Cascading Style Sheets Level 3'
+            sub: 'background-color: #1e3a8a'
         },
         rightAside:{
-            summary:'cornerstone of modern web design.'
+            summary:'background-color: #1e3a8a'
         }
     },
     {
@@ -71,7 +71,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             sub: 'Syntactically Awesome Style Sheets'
         },
         rightAside:{
-            summary:'preprocessor scripting language Css.'
+            summary:'&__icon{ color:pink }'
         }
     },
     {
@@ -95,7 +95,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
             sub: 'Utility-first CSS framework'
         },
         rightAside:{
-            summary:'Idk it is simple but...'
+            summary:'cn("w-fit mx-auto")'
         }
     },
     {

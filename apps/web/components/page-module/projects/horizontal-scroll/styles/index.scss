@@ -1,36 +1,18 @@
 .horizontal-slider-main{
   display: flex;
   flex-wrap: nowrap;
-  overflow: visible;
-
+  margin: 0 auto;
 }
 
 .slide{
-  width: 100vw;
-  min-width: 100vw;
+  box-sizing: border-box;
+  width: 44%;
   height: 100vh;
   flex-shrink: 0;
-
-  &:nth-of-type(1){
-    background: #0a84ff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  &__bg{
+    
   }
-
-  &:nth-of-type(2){
-    background: #731d1d;
-  }
-
-  &:nth-of-type(3){
-    background: #4a53e7;
-  }
-
-  &:nth-of-type(4){
-    background: rgba(255, 255, 255, 0.11);
-  }
-
-  &:nth-of-type(5){
-    background: #4d290c;
-  }
-
-
-
 }

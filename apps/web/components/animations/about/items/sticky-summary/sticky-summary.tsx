@@ -224,14 +224,14 @@ export default function StickySummary(
                 "grid grid-cols-10 items-start align-top gap-0 "
             )}
         >
-            <div ref={asideLeftRef} className="aside col-start-2 col-end-5
+            <div ref={asideLeftRef} className="aside col-start-1 col-end-5
             aside--left opacity-0 ">
-                <div className="flex flex-col h-full justify-center pl-4 text-end ">
+                <div className="flex w-full flex-col h-full justify-start pl-4 text-end ">
                     <h2 className={cn(typography.h3Typo)}>
                         {leftAside.title}
                     </h2>
                     <p className={cn(typography.pTypo + " text-sm text-pretty ")}>
-                        {leftAside.sub}
+                        {rightAside.summary}
                     </p>
                 </div>
             </div>
@@ -252,7 +252,6 @@ export default function StickySummary(
             aside--right opacity-0">
                 <div className="flex flex-col justify-start items-start">
                     <h3 className={cn(typography.smallTypo + " leading-snug")}>
-                        {rightAside.summary}
                     </h3>
                 </div>
             </div>

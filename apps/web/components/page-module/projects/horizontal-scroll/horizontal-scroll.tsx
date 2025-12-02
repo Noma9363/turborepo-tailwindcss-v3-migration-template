@@ -2,10 +2,52 @@
 
 import {gsap, useGSAP, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 import {cn} from "@workspace/ui/lib/utils";
-import './styles/index.scss';
 import React from "react";
+import {ProjectCard, ProjectCardProps} from "@/components/page-module/projects/project-card/project-card";
+import './styles/index.scss';
 
 export const HorizontalScroll = () => {
+
+    // dummy
+    const dummyCardData:ProjectCardProps[] = [
+        {
+            title: 'Project-1',
+            description: "this is Desc BlaBla...",
+            link: '',
+            tags: ['A', 'B' , 'C', 'D'],
+            img: ''
+        },
+        {
+            title: 'Project-2',
+            description: "this is Desc BlaBla...",
+            link: '',
+            tags: ['A', 'B' , 'C', 'D'],
+            img: ''
+        },
+        {
+            title: 'Project-3',
+            description: "this is Desc BlaBla...",
+            link: '',
+            tags: ['A', 'B' , 'C', 'D'],
+            img: ''
+        },
+        {
+            title: 'Project-4',
+            description: "this is Desc BlaBla...",
+            link: '',
+            tags: ['A', 'B' , 'C', 'D'],
+            img: ''
+        },
+        {
+            title: 'Project-5',
+            description: "this is Desc BlaBla...",
+            link: '',
+            tags: ['A', 'B' , 'C', 'D'],
+            img: ''
+        }
+
+    ]
+
 
     // ref state
     const containerRef = React.useRef<HTMLDivElement>(null);
@@ -23,7 +65,10 @@ export const HorizontalScroll = () => {
                 trigger: containerRef.current,
                 pin: true,
                 scrub: 1,
-                markers: true,
+                markers: {
+                    startColor: "blue",
+                    endColor: "purple"
+                },
                 end: ()=> "+=" + containerRef.current!.scrollWidth
             }
         })
@@ -35,14 +80,19 @@ export const HorizontalScroll = () => {
     })
 
 
-    return (
-        <div ref={containerRef} className="horizontal-slider-main">
 
-                <div className="slide">Slide 1</div>
-                <div className="slide">Slide 2</div>
-                <div className="slide">Slide 3</div>
-                <div className="slide">Slide 4</div>
-                <div className="slide">Slide 5</div>
+    return (
+        <div ref={containerRef} className="horizontal-slider-main overflow-visible">
+
+            {dummyCardData.map((cardData, index)=>(
+                <div key={`${index}${cardData.title}`} className={cn("slide box-border")}>
+                    <div className={cn("slide__bg box-border w-full pl-8 rounded-md")}>
+                        <ProjectCard key={`card${cardData.title}-${cardData.link}`} title={cardData.title} description={cardData.description} img={cardData.img} link={cardData.link} tags={cardData.tags} />
+                    </div>
+                </div>
+            ))}
+
+
         </div>
     )
 }

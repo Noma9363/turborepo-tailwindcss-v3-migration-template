@@ -1,5 +1,13 @@
+@use '@workspace/ui/styles/mixins' as *;
 #projects{
 
   overflow-x: hidden;
 }
+
+.page-container{
+  @include responsive-container;
+  @include resize-root-padding;
+}
+
+
 
