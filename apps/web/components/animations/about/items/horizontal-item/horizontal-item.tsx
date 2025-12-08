@@ -19,14 +19,15 @@ const HorizontalSection = React.forwardRef<HTMLDivElement, HorizontalSectionProp
                 ref={ref}
                 className={cn(" flex-shrink-0 px-1.5 ")}
             >
-                <div className={cn("flex flex-col justify-center text-center align-middle items-center gap-2 px-4")}>
+                <div className={cn("flex flex-col justify-center text-center align-middle items-center gap-2 px-4" +
+                    "")}>
                     <IconBox
                         size={iconCfg.iconSize}
                         metaBallsColorCfg={metaBallsCfg}
                     >
                         <Icon style={iconCfg.style} size={44}/>
                     </IconBox>
-                    <p className={cn(defaultFontStyles + " font-medium")}>{title}</p>
+                    <p className={cn("font-mono text-sm font-light fit-co")}>{title}</p>
                 </div>
             </div>
         );

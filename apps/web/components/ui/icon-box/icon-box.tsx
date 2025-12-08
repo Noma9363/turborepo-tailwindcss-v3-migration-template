@@ -10,6 +10,8 @@ type BoxSize = {
     sm: 'w-12 h-12';
     md: 'w-16 h-16';
     lg: 'w-20 h-20';
+    xl: 'w-24 h-24';
+    "2xl": 'w-32 h-32';
 }
 
 interface IconBoxProps {
@@ -33,7 +35,10 @@ export const IconBox = (
     const sizeMap:BoxSize = {
         sm: 'w-12 h-12',
         md: 'w-16 h-16',
-        lg: 'w-20 h-20'
+        lg: 'w-20 h-20',
+        xl: 'w-24 h-24',
+        "2xl" : 'w-32 h-32',
+
     };
 
     const metaBallsAttr: MetaBallsProps = {
@@ -58,14 +63,14 @@ export const IconBox = (
         backgroundOpacity: 0.1,
         saturation: 1,
         borderWidth: 0.07,
-        brightness: 20,
+        brightness: 60,
         opacity: 0.9,
         blur: 8,
         displace: 1.2,
-        distortionScale: 182,
-        redOffset: 49,
-        greenOffset: 40,
-        blueOffset: 39
+        distortionScale: 150,
+        redOffset: 29,
+        greenOffset: 24,
+        blueOffset: 29
     }
 
     return (

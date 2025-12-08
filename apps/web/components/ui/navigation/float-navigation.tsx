@@ -80,7 +80,10 @@ export const FloatingNav = () => {
                         href={singleItemParam.href}
                         title={singleItemParam.title}
                         onClick={(e) => scrollToSection(e, singleItemParam.href)}
-                        className={cn(navigationMenuTriggerStyle(), isActive && "bg-accent text-accent-foreground")}
+                        className={cn(
+                            navigationMenuTriggerStyle(), " bg-primary-foreground hover:bg-accent-foreground" +
+                            " hover:text-accent ", isActive && " bg-accent-foreground " +
+                            " text-accent")}
                     >
                         {singleItemParam.title}
                     </Link>
@@ -89,13 +92,16 @@ export const FloatingNav = () => {
         );
     }
     const renderDepthMenu = (multipleMenu: NavRoute) => {
+        const isActive = activeSection === multipleMenu.href;
         return (
             <NavigationMenuItem key={`${multipleMenu.href}-${multipleMenu.title}`}>
-                <NavigationMenuTrigger>{multipleMenu.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={cn(
+                    navigationMenuTriggerStyle(), "bg-primary-foreground hover:bg-accent-foreground" + " hover:text-accent", isActive && " bg-accent-foreground " + "text-accent"
+                )}>{multipleMenu.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
                         {multipleMenu.items?.map((subItem) => {
-                            const isActive = activeSection === subItem.href;
+
                             return (
                                 <li key={`${subItem.href}-${subItem.title}`}>
                                     <NavigationMenuLink asChild>
@@ -103,7 +109,7 @@ export const FloatingNav = () => {
                                             href={subItem.href}
                                             key={`${subItem.href}-${subItem.title}`}
                                             onClick={(e) => handleScroll(e, subItem.href)}
-                                            className={cn("", isActive && "bg-accent text-accent-foreground")}
+                                            className={cn(navigationMenuTriggerStyle())}
                                         >
                                             <div>
                                                 {subItem.title}
@@ -126,8 +132,9 @@ export const FloatingNav = () => {
         <div className={cn("fixed inset-0 top-4 left-1/2 -translate-x-1/2  flex items-center h-fit"+
             " justify-center" +
             " z-[100]")}>
-            <NavigationMenu className={cn("relative rounded-xl px-4 py-2 bg-black w-fit")}>
-                <NavigationMenuList>
+            <NavigationMenu className={cn("relative rounded-xl px-4 py-2 w-fit ring-0 bg-primary-foreground" +
+                " ring-offset-neutral-600 ring-offset-1 ")}>
+                <NavigationMenuList className={cn()}>
                     {
                         commonNavData.map((menuItems) => {
                             if (menuItems.items === undefined) {

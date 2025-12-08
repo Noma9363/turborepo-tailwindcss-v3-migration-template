@@ -11,6 +11,7 @@ import {InformationModule} from "@/components/animations/about/information/infor
 import {
     typography
 } from "@workspace/ui/components/ui/tailwind-variations"
+import {Headline} from "@/components/common/headline/headline";
 
 export const About = () => {
 
@@ -18,33 +19,28 @@ export const About = () => {
 
     return (
         <div id="about" className=" flex flex-col items-center justify-center min-h-screen w-full ">
-            <section className={cn("page-container " + "w-full flex flex-col align-middle items-center justify-start" +
-                " h-full")}
+            <div className={cn("page-container " + "w-full flex flex-col align-middle items-center justify-start" +
+                " h-full gap-2")}
             >
-                <h2
-                    className={cn( `${typography.h2Typo} w-full text-start`, )}
-                >
-                    About.
-                </h2>
-                <span
-                    className={cn(`${typography.leadTypo} w-full text-start`)}
-                >
-                    Front End Developer
-                </span>
-            </section>
+                <Headline level="h2">About.</Headline>
+                <Headline level="lead">Front End Developer</Headline>
+            </div>
 
             <StickyScroll/>
             {/* for spacing */}
             <div className="h-[50vh]"></div>
 
-            <section className={cn("pb-12 flex flex-col justify-center items-center")}>
-                <SplitText
-                    textAlign="start"
-                    tag="h3"
-                    text="[Core Stack.]"
-                    delay={200}
-                    className={cn(typography.h2Typo + " w-full text-7xl")}
-                />
+            <section className={cn("page-container pb-12 flex flex-col justify-center items-center")}>
+                <div className="flex flex-col gap-2 w-full">
+                    <SplitText
+                        textAlign="start"
+                        tag="h3"
+                        text="[Core Stack.]"
+                        delay={200}
+                        className={cn(typography.h2Typo + " w-full text-7xl")}
+                    />
+                    <Headline level="lead">Front End Developer</Headline>
+                </div>
 
                 <div className="pb-12"></div>
                 <HorizontalScroll/>

@@ -6,6 +6,7 @@ import {About} from "@/components/page/about";
 import {cn} from "@workspace/ui/lib/utils";
 import {Projects} from "@/components/page/projects";
 import './page.scss';
+import {ContactPage} from "@/components/page/contact";
 
 const Page = () => {
     return (
@@ -17,6 +18,7 @@ const Page = () => {
                 {/*
                     soooooon
                 */}
+                <ContactPage/>
             </div>
         </main>
     )

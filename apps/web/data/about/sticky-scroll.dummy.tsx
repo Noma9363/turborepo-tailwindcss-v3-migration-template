@@ -6,7 +6,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon:SiHtml5,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -30,7 +30,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiCss3,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -54,7 +54,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiSass,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -78,7 +78,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiTailwindcss,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -102,7 +102,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiJavascript,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -126,7 +126,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon:SiTypescript,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -150,7 +150,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiFigma,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -174,7 +174,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiShadcnui,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{
@@ -198,7 +198,7 @@ export const StickyScrollDummy:gsapItemProps[] = [
         iconCfg: {
             icon: SiTurborepo,
             color: "white",
-            iconSize: "lg",
+            iconSize: "xl",
             style: {borderRadius: '0.4rem'}
         },
         metaBallsCfg:{

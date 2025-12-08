@@ -6,7 +6,7 @@ import {CSSMetaBallsProps} from "@workspace/ui/components/reactbits/css-metaball
 export type basicIconCfg = {
 
     color?: string;
-    iconSize: "sm" | "md" | "lg";
+    iconSize: "sm" | "md" | "lg" | "xl" | "2xl";
     style?: React.CSSProperties;
     icon: IconType;
 }

@@ -7,12 +7,14 @@ import {Button} from "@workspace/ui/components/ui/button";
 import {cn} from "@workspace/ui/lib/utils";
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 
-export interface ProjectCardProps{
+export interface ProjectCardProps {
+    ref?: React.RefObject<HTMLDivElement | null>;
     title: string;
     description: string;
     img: React.ReactNode;
     link?: string;
     tags?: string[];
+    className?: string;
 }
 
 export const ProjectCard = (
@@ -21,46 +23,50 @@ export const ProjectCard = (
         description,
         img,
         link,
-        tags
-    }:ProjectCardProps
-
-
+        tags,
+        className
+    }: ProjectCardProps
 ) => {
-    return(
+    return (
         <Card
+
             variant="glass"
-            className={cn("rounded-md overflow-hidden w-full h-fit " +
-            " flex flex-col justify-stretch p-0 " +
-            " ")}
+            className={cn(" rounded-md overflow-hidden w-full h-fit " +
+                " flex flex-col p-0 gap-4 " + className)}
         >
-            <CardContent className={cn("bg-blue-950 h-44")}>
+            <CardContent className={cn("bg-blue-950 h-40 p-6")}>
                 {img}
+                img example
             </CardContent>
-            <CardHeader className={cn("pt-6")}>
-                <CardTitle>
-                    <p className={cn("pb-4")}>
-                        {title}
-                    </p>
-                    <p className={cn("flex gap-2")}>
-                        {
-                            tags?.map((tag, index)=>(<Badge key={`${tag}-${index}`} className={cn("rounded-sm")} variant="secondary">{tag}</Badge>
-                            ))
-                        }
-                    </p>
-                </CardTitle>
-                <CardDescription className={cn("pt-2")}>
-                    <p>
-                        {description}
-                    </p>
-                </CardDescription>
-            </CardHeader>
-            <CardFooter className={cn("py-4 flex justify-start")}>
-                <Button
-                    onClick={()=>{window.open(link)}}
-                >
-                    Demo
-                </Button>
-            </CardFooter>
+            {/*description area*/}
+            <div className={cn(" flex-1 flex flex-col justify-start h-44 py-4")}>
+                <CardHeader className={cn("flex flex-col flex-1")}>
+                    <CardTitle className="">
+                        <p className={cn("")}>
+                            {title}
+                        </p>
+                        <p className={cn("flex gap-2")}>
+                            {tags?.map((tag, index) => (<Badge key={`${tag}-${index}`} className={cn("rounded-sm")}
+                                                               variant="secondary">{tag}</Badge>
+                            ))}
+                        </p>
+                    </CardTitle>
+                    <CardDescription className={cn("flex flex-col justify-around gap-4")}>
+                        <p className={cn("h-1/3 overflow-hidden text-ellipsis pb-6")}>
+                            {description}
+                        </p>
+                        <Button
+                            className={cn("w-fit")}
+                            variant="default"
+                            onClick={() => {
+                                window.open(link)
+                            }}
+                        >
+                            Demo
+                        </Button>
+                    </CardDescription>
+                </CardHeader>
+            </div>
         </Card>
     )
 }

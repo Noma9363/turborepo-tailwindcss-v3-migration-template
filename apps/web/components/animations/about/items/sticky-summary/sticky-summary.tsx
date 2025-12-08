@@ -8,6 +8,7 @@ import {gsapItemProps} from "@/interfaces/page/about/sticky-scroll-interface.int
 import {
     typography
 } from "@workspace/ui/components/ui/tailwind-variations";
+import {PreviewCard} from "@/components/page-module/about/preview-card/preview-card";
 
 
 export default function StickySummary(
@@ -116,7 +117,7 @@ export default function StickySummary(
                     start: `top+=${parentHeight * 0.2} center`,
                     end: `top+=${parentHeight * 0.4} center`,
                     scrub: 1,
-                    markers: true
+                    markers: isDev
                 }
             });
             boxFadeOutTrEle.to(
@@ -226,11 +227,11 @@ export default function StickySummary(
         >
             <div ref={asideLeftRef} className="aside col-start-1 col-end-5
             aside--left opacity-0 ">
-                <div className="flex w-full flex-col h-full justify-start pl-4 text-end ">
+                <div className="flex w-full flex-col h-full items-end justify-start pl-4 text-end gap-0.5">
                     <h2 className={cn(typography.h3Typo)}>
                         {leftAside.title}
                     </h2>
-                    <p className={cn(typography.pTypo + " text-sm text-pretty ")}>
+                    <p className={cn("font-mono text-sm font-light fit-co")}>
                         {rightAside.summary}
                     </p>
                 </div>
@@ -245,14 +246,13 @@ export default function StickySummary(
                     metaBallsColorCfg={metaBallsCfg}
                     data-speed="0.1"
                 >
-                    <Icon size={44} style={iconCfg.style}/>
+                    <Icon size={56} style={iconCfg.style}/>
                 </IconBox>
             </div>
-            <div ref={asideRightRef} className="aside col-start-7 col-end-10
+            <div ref={asideRightRef} className="aside col-start-7 col-end-11
             aside--right opacity-0">
-                <div className="flex flex-col justify-start items-start">
-                    <h3 className={cn(typography.smallTypo + " leading-snug")}>
-                    </h3>
+                <div className="flex w-full flex-col justify-start items-start">
+                   {/*<PreviewCard/>*/}
                 </div>
             </div>
         </div>

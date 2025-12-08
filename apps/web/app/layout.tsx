@@ -4,6 +4,8 @@ import {GeistSans} from "geist/font/sans";
 import {Providers} from "@/components/providers"
 import "@workspace/ui/styles/globals.scss"
 import {FloatingNav} from "@/components/ui/navigation/float-navigation";
+import {Separator} from "@workspace/ui/components/ui/separator";
+import {cn} from "@workspace/ui/lib/utils";
 
 
 export const metadata: Metadata = {
@@ -30,6 +32,20 @@ export default function RootLayout({
             <Providers>
                     {children}
             </Providers>
+            <footer className="page-container">
+                <Separator className={cn("my-4")}/>
+                <div className={cn("flex-col")}>
+                    <section className={cn("pb-6")}>
+                        Copyright &copy; joyHan blabla
+                    </section>
+                    <section className={cn("pb-12")}>
+                        policy etc...
+                    </section>
+                    <section className={cn("pb-20")}>
+                        links
+                    </section>
+                </div>
+            </footer>
         </body>
         </html>
     )
