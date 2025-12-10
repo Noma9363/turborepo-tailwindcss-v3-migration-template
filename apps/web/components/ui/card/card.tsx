@@ -39,7 +39,7 @@ export const tempAboutCard = (
         // color: "#1e3a8a",
         // cursorBallColor: "#2563eb",
         color: metaBallsColorCfg?.color,
-        cursorBallColor: metaBallsColorCfg?.backgroundColor,
+        cursorBallColor: metaBallsColorCfg?.cursorBallColor,
         cursorBallSize: 2,
         ballCount: 8,
         animationSize: 8,

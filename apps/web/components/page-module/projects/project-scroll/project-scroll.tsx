@@ -16,7 +16,7 @@ interface ProjectScrollProps {
 
 export const ProjectScroll = (
     {
-        isDev,
+        isDev = false,
         title,
         desc,
         img,
@@ -55,7 +55,7 @@ export const ProjectScroll = (
                             end: "top bottom-=105",
                             scrub: 1,
                             invalidateOnRefresh: true,
-                            markers: isDev
+                            // markers: isDev
                         }
                     }
                 );

@@ -42,7 +42,6 @@ export const InformationModule = () => {
                         end: 'center bottom-=10%',
                         scrub: 0.1,
                         invalidateOnRefresh: true,
-                        markers: true
                     }
                 }
             );
