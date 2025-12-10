@@ -17,7 +17,7 @@ export const ContactField = (
         <div className={cn("", className)} {...props}>
             <Card variant="glass" className="max-w-md mx-auto">
                 <CardHeader className="pb-4">
-                    <CardDescription className={cn("w-fit ", typography.inlineCodeTypo)}>Contact me. Enter your email.</CardDescription>
+                    <CardDescription className={cn("w-fit ", typography.inlineCodeTypo)}>Contact field, Enter your email.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form className="flex flex-col justify-between gap-6">

@@ -2,10 +2,25 @@ import React from "react";
 import type {Metadata} from "next";
 import {GeistSans} from "geist/font/sans";
 import {Providers} from "@/components/providers"
-import "@workspace/ui/styles/globals.scss"
 import {FloatingNav} from "@/components/ui/navigation/float-navigation";
 import {Separator} from "@workspace/ui/components/ui/separator";
 import {cn} from "@workspace/ui/lib/utils";
+import {Inter, Noto_Sans_KR} from "next/font/google";
+import "./page.scss";
+
+/* font setup */
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+    display: 'swap'
+});
+
+const notoSansKr = Noto_Sans_KR({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-noto-sans-kr',
+    display: 'swap'
+});
 
 
 export const metadata: Metadata = {
@@ -22,12 +37,12 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="ko" className="scroll-smooth" suppressHydrationWarning>
+        <html lang="ko" className={cn(`scroll-smooth ${GeistSans.variable} ${notoSansKr.variable}`)} suppressHydrationWarning>
         <head>
             <meta name='darkreader-lock' content="" />
             <title>Joy Han</title>
         </head>
-        <body className={`${GeistSans.className} antialiased relative`}>
+        <body className={cn(`antialiased relative`, GeistSans.className)}>
         <FloatingNav/>
             <Providers>
                     {children}

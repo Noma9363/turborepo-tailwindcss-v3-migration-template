@@ -52,7 +52,7 @@ export const Projects = () => {
         <div id="projects" className={cn("w-screen pt-16")}>
             <div className={cn("flex rounded flex-col justify-center items-center page-container gap-2 ")}>
                 <Headline level="h2">Projects.</Headline>
-                <Headline level="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Headline>
+                <Headline level="lead">vite-react + typescript 로 제작한 페이지들입니다.</Headline>
             </div>
             {/* too much gap for prev element */}
             {/*<HorizontalScroll/>*/}
@@ -67,7 +67,6 @@ export const Projects = () => {
                         img={dummyProject.img} isDev
                     />
                 ))}
-                lorem
             </div>
         </div>
     )

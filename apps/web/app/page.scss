@@ -1,6 +1,12 @@
 @use "@workspace/ui/styles/mixins" as *;
 @use "@workspace/ui/styles/variables" as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .page-root{
   // @include resize-root-padding;
 }

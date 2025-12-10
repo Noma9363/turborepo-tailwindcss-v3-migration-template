@@ -14,7 +14,6 @@ const cardVariants = cva(
                     "backdrop-blur-sm backdrop-saturate-440",
                     "border-white/20 dark:border-white/10 border ",
                     "shadow-[0_8px_32px_0_rgba(31,38,135,0.15)]",
-                    "hover:bg-white/15 dark:hover:bg-white/10",
                     "transition-all duration-300"
                 ].join(" ")
             }

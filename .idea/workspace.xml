@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/heading/section-heading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/project-card/project-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/horizontal-scroll/horizontal-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/horizontal-scroll/horizontal-scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/items/sticky-summary/sticky-summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/items/sticky-summary/sticky-summary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/horizontal-scroll/horizontal-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/horizontal-scroll/horizontal-scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/horizontal-scroll/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/horizontal-scroll/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/app/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/app/page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/indormation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/indormation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/information.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/information.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/contact/contact-field/contact-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/contact/contact-field/contact-field.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/styles/projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/styles/projects.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/data/about/sticky-scroll.dummy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/data/about/sticky-scroll.dummy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/assets/pic_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/assets/pic_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/reactbits/css-metaballs/CSSMetaBalls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/reactbits/css-metaballs/CSSMetaBalls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/ui/card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/ui/tailwind-variations/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/ui/tailwind-variations/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +48,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="36GfvSF9JpRfNhr25A7wFaP6Ab7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -60,7 +70,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.언어 디폴트 값&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joihan/Creative Cloud Files noma9363@gmail.com 1b8a5c83682d6c1df362a7f35840b762981d9acce84b12351ea0d04c94753be1/문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -83,7 +93,23 @@
       <workItem from="1764638059854" duration="2170000" />
       <workItem from="1764640341996" duration="9803000" />
       <workItem from="1764653234479" duration="114000" />
-      <workItem from="1764653387061" duration="3769000" />
+      <workItem from="1764653387061" duration="4381000" />
+      <workItem from="1764663690575" duration="3715000" />
+      <workItem from="1764809060301" duration="12119000" />
+      <workItem from="1764821421012" duration="679000" />
+      <workItem from="1764824283858" duration="43000" />
+      <workItem from="1764824339436" duration="5840000" />
+      <workItem from="1764832996117" duration="4894000" />
+      <workItem from="1764895261261" duration="594000" />
+      <workItem from="1764898108139" duration="3558000" />
+      <workItem from="1764906472134" duration="3298000" />
+      <workItem from="1764925663371" duration="764000" />
+      <workItem from="1765009774490" duration="23030000" />
+      <workItem from="1765179792967" duration="2265000" />
+      <workItem from="1765240757484" duration="5000" />
+      <workItem from="1765246505892" duration="39000" />
+      <workItem from="1765327002946" duration="2657000" />
+      <workItem from="1765329775408" duration="2604000" />
     </task>
     <servers />
   </component>

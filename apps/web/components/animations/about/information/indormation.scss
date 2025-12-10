@@ -44,10 +44,10 @@
   display: block;
   left: 0;
   right: 0;
-  bottom: -12%;
+  bottom: -50%;
   width: 100%;
-  aspect-ratio: 4/6;
-
+  pointer-events: none;
+  cursor: none;
 }
 .glass{
 }

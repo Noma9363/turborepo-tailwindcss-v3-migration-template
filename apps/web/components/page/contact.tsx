@@ -12,7 +12,7 @@ export const ContactPage = () => {
 
             <div className={cn("flex rounded flex-col justify-center items-center page-container gap-2 ")}>
                 <Headline level="h2" className="text-center">Contact.</Headline>
-                <Headline level="lead" className="text-center break-all">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Headline>
+                <Headline level="lead" className="text-center break-all">관심이 있으시다면...</Headline>
             </div>
             <ContactField className="page-container"/>
         </div>
