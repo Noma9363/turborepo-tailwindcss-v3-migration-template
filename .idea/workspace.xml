@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/src/components/reactbits/meta-balls/MetaBalls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/components/reactbits/meta-balls/MetaBalls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/src/data/navigation/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/data/navigation/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1765346056954" duration="169000" />
       <workItem from="1765346238680" duration="59000" />
       <workItem from="1765346332295" duration="12000" />
-      <workItem from="1765346354556" duration="2848000" />
+      <workItem from="1765346354556" duration="4863000" />
     </task>
     <servers />
   </component>

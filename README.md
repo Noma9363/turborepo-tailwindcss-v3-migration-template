@@ -1,16 +1,56 @@
 # shadcn/ui monorepo template
 
-This template is for creating a monorepo with shadcn/ui.
+shadcn/ui monorepo template 을 활용한 포트폴리오 입니다.
 
-## Usage
+## turborepo root 기준 실행방법 
+`packages/ui` 패키지에 맞춰 각 앱에서 `pnpm install` 를 입력해야 합니다.
+
+현재 프로젝트에서는 `apps/web` 해당 디렉토리가 Vercel 에 배포될 예정입니다.
+
+## 사용된 라이브러리
+
+- `shadcn/ui` : 기본적인 컴포넌트의 기능을 갖추고 있는 라이브러리
+- `reactbits` : `gsap` 및 애니메이션을 간단하게 제공하는 라이브러리
+- `gsap` : dom 내에 요소들을 참조하여 애니메이션 생성이 가능한 라이브러리
+- `tailwindCss` : 인라인 방식 클래스 스타일 라이브러리
+
+## 프로젝트 소개
+> monorepo 시스템인 turborepo 를 사용하여 SSR 어플리케이션 구축
+> 
+> Ui 라이브러리는 간단한 기능만 제공하는 Shadcn/ui 선정
+> 
+> Turborepo 구조를 활용하여 공유할 컴포넌트 및 유틸리티등 `packages/ui` 에 보관하여 각 앱에 공유
+
+추후 Project 들을 각 `app/...` 에 구현할 예정
+
+
+## 기술 스택
+- HTML
+- CSS
+- SASS
+- TailwindCSS
+- Javascript
+- Typescript
+- Figma
+- Shadcn/ui
+- Turborepo
+
+## figma link
+[피그마](https://www.figma.com/design/rFAzYzvG5zkNP68ykG9pTD/Untitled?node-id=0-1&t=MSg370L0kALh6LkL-1)
+## 배포 URL
+[vercel 에 배포된 링크는 다음과 같습니다](https://turborepo-tailwindcss-v3-migration-template-aa24glmdj.vercel.app/)
+## Usage (사용법)
 
 ```bash
 pnpm dlx shadcn@latest init
 ```
 
-## Adding components
+## Adding components 컴포넌트 추가방법
+
+컴포넌트를 추가학 위해 `web` 앱에서 아래 명령어를 입력합니다.
 
 To add components to your app, run the following command at the root of your `web` app:
+
 
 ```bash
 pnpm dlx shadcn@latest add button -c apps/web
