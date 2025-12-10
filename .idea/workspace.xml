@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/information.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/animations/about/information/information.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/ui/card/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/ui/card/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/ui/navigation/float-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/components/ui/navigation/float-navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/reactbits/meta-balls/MetaBalls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/packages/ui/src/components/reactbits/meta-balls/MetaBalls.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1765246505892" duration="39000" />
       <workItem from="1765327002946" duration="2657000" />
       <workItem from="1765329775408" duration="8332000" />
-      <workItem from="1765339016202" duration="1410000" />
+      <workItem from="1765339016202" duration="2757000" />
     </task>
     <servers />
   </component>

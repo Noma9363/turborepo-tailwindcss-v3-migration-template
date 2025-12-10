@@ -82,7 +82,8 @@ export const FloatingNav = () => {
                         onClick={(e) => scrollToSection(e, singleItemParam.href)}
                         className={cn(
                             navigationMenuTriggerStyle(), " bg-primary-foreground hover:bg-accent-foreground" +
-                            " hover:text-accent ", isActive && " bg-accent-foreground " +
+                            " hover:text-secondary ",
+                            isActive && " bg-accent-foreground " +
                             " text-accent")}
                     >
                         {singleItemParam.title}
