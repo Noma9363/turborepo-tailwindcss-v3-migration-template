@@ -27,11 +27,11 @@ function horizontalLoop(items: gsap.TweenTarget, config?: HorizontalLoopConfig):
         repeat: cfg.repeat,
         paused: cfg.paused,
         defaults: {ease: "none"},
-        onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+        onReverseComplete: () => {tl.totalTime(tl.rawTime() + tl.duration() * 100)},
     }) as HorizontalLoopTimeline;
 
     const length = itemsArray.length;
-    const startX = itemsArray[0].offsetLeft;
+    const startX = itemsArray[0]!.offsetLeft;
     const times: number[] = [];
     const widths: number[] = [];
     const xPercents: number[] = [];
@@ -59,23 +59,23 @@ function horizontalLoop(items: gsap.TweenTarget, config?: HorizontalLoopConfig):
     gsap.set(itemsArray, {x: 0});
 
     totalWidth =
-        itemsArray[length - 1].offsetLeft +
-        (xPercents[length - 1] / 100) * widths[length - 1] -
+        itemsArray[length - 1]!.offsetLeft +
+        (xPercents[length - 1]! / 100) * widths[length - 1]! -
         startX +
-        itemsArray[length - 1].offsetWidth *
-        (gsap.getProperty(itemsArray[length - 1], "scaleX") as number) +
+        itemsArray[length - 1]!.offsetWidth *
+        (gsap.getProperty(itemsArray[length - 1]!, "scaleX") as number) +
         (parseFloat(cfg.paddingRight as string) || 0);
 
     for (let i = 0; i < length; i++) {
-        item = itemsArray[i];
-        curX = (xPercents[i] / 100) * widths[i];
+        item = itemsArray[i]!;
+        curX = (xPercents[i]! / 100) * widths[i]!;
         distanceToStart = item.offsetLeft + curX - startX;
-        distanceToLoop = distanceToStart + widths[i] * (gsap.getProperty(item, "scaleX") as number);
+        distanceToLoop = distanceToStart + widths[i]! * (gsap.getProperty(item, "scaleX") as number);
 
         tl.to(
             item,
             {
-                xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+                xPercent: snap(((curX - distanceToLoop) / widths[i]!) * 100),
                 duration: distanceToLoop / pixelsPerSecond,
             },
             0
@@ -84,7 +84,7 @@ function horizontalLoop(items: gsap.TweenTarget, config?: HorizontalLoopConfig):
                 item,
                 {
                     xPercent: snap(
-                        ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+                        ((curX - distanceToLoop + totalWidth) / widths[i]!) * 100
                     ),
                 },
                 {
@@ -110,14 +110,14 @@ function horizontalLoop(items: gsap.TweenTarget, config?: HorizontalLoopConfig):
         const newIndex = gsap.utils.wrap(0, length, idx);
         let time = times[newIndex];
 
-        if ((time > tl.time()) !== (idx > curIndex)) {
+        if ((time! > tl.time()) !== (idx > curIndex)) {
             v.modifiers = {time: gsap.utils.wrap(0, tl.duration())};
-            time += tl.duration() * (idx > curIndex ? 1 : -1);
+            time! += tl.duration() * (idx > curIndex ? 1 : -1);
         }
 
         curIndex = newIndex;
         v.overwrite = true;
-        return tl.tweenTo(time, v);
+        return tl.tweenTo(time!, v);
     }
 
     tl.next = (vars?: gsap.TweenVars) => toIndex(curIndex + 1, vars);
