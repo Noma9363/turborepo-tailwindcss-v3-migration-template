@@ -15,13 +15,6 @@ export const commonNavData :NavRoute[] =[
         title: "Projects",
         href: "#projects",
         description: "Projects",
-        items:[
-            {
-                title: "Sub-1",
-                href: "#sub-1",
-                description: "this is sub-1 of /Projects"
-            }
-        ]
     },
     {
         title: "Contact",

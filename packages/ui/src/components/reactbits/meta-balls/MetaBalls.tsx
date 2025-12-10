@@ -137,6 +137,8 @@ const MetaBalls: React.FC<MetaBallsProps> = ({
         if (!container) return;
 
         const dpr = 1;
+        const maxCanvasPixels = 1680 * 1050;
+
         const renderer = new Renderer({
             dpr,
             alpha: true,
@@ -211,7 +213,17 @@ const MetaBalls: React.FC<MetaBallsProps> = ({
             if (!container) return;
             const width = container.clientWidth;
             const height = container.clientHeight;
-            renderer.setSize(width * dpr, height * dpr);
+
+            // calculate total pixels
+            const totalPixels  = (width * dpr) * (height * dpr);
+
+            // case too many pixels, reduce dpr
+            let effectiveDpr = dpr;
+            if(totalPixels > maxCanvasPixels) {
+                effectiveDpr = Math.sqrt(maxCanvasPixels / (width * height));
+            }
+
+            renderer.setSize(width * effectiveDpr, height * effectiveDpr);
             gl.canvas.style.width = `${width}px`;
             gl.canvas.style.height = `${height}px`;
             program.uniforms.iResolution.value.set(gl.canvas.width, gl.canvas.height, 0);
