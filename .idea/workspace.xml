@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/next-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -56,7 +53,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joihan/Creative Cloud Files noma9363@gmail.com 1b8a5c83682d6c1df362a7f35840b762981d9acce84b12351ea0d04c94753be1/문서/portfolio-turbo/turborepo-tailwindcss-v3-migration-template/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -97,6 +94,10 @@
       <workItem from="1765327002946" duration="2657000" />
       <workItem from="1765329775408" duration="8332000" />
       <workItem from="1765339016202" duration="3898000" />
+      <workItem from="1765345856645" duration="189000" />
+      <workItem from="1765346056954" duration="169000" />
+      <workItem from="1765346238680" duration="59000" />
+      <workItem from="1765346332295" duration="12000" />
     </task>
     <servers />
   </component>
