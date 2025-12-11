@@ -42,7 +42,7 @@ export const ProjectCard = (
             <div className={cn(" flex-1 flex flex-col  h-44 py-4")}>
                 <CardHeader className={cn("flex flex-col flex-1 justify-around")}>
                     <CardTitle className="">
-                        <p className={cn("")}>
+                        <p className={cn(typography.h4Typo)}>
                             {title}
                         </p>
                         <p className={cn("flex gap-2")}>
@@ -52,7 +52,7 @@ export const ProjectCard = (
                         </p>
                     </CardTitle>
                     <CardDescription className={cn("flex flex-col  gap-4")}>
-                        <p className={cn("h-1/3 overflow-hidden text-ellipsis pb-6")}>
+                        <p className={cn(typography.leadTypo ,"h-1/3 overflow-hidden text-ellipsis pb-6")}>
                             {description}
                         </p>
                         <Button

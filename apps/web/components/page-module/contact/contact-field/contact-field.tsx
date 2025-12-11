@@ -32,8 +32,8 @@ export const ContactField = (
     return (
         <div className={cn("page-container")} >
             <Card variant="glass" className="max-w-md mx-auto">
-                <CardHeader className="pb-4">
-                    <CardDescription className={cn("w-fit ", typography.inlineCodeTypo)}>Contact field, Enter your email.</CardDescription>
+                <CardHeader className={cn("pb-4")}>
+                    <CardDescription className={cn("w-fit ", typography.leadTypo)}>Contact field, Enter your email.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form
@@ -41,9 +41,9 @@ export const ContactField = (
                         onSubmit={onSubmit}
                     >
                         <Field>
-                            <FieldLabel htmlFor="name">Name</FieldLabel>
+                            <FieldLabel htmlFor="name" className={cn(typography.largeTypo)} >Name</FieldLabel>
                             <Input
-                                className=""
+                                className={cn(typography.largeTypo)}
                                 id="name"
                                 name="name"
                                 type="text"
@@ -55,9 +55,9 @@ export const ContactField = (
                             />
                         </Field>
                         <Field>
-                            <FieldLabel htmlFor="email">Email</FieldLabel>
+                            <FieldLabel htmlFor="email" className={cn(typography.largeTypo)}>Email</FieldLabel>
                             <Input
-                                className=""
+                                className={cn(typography.largeTypo)}
                                 id="email"
                                 name="email"
                                 type="email"
@@ -69,14 +69,14 @@ export const ContactField = (
                             />
                         </Field>
                         <Field>
-                            <FieldLabel htmlFor="message">
+                            <FieldLabel htmlFor="message" className={cn(typography.largeTypo)}>
                                 Comments
                             </FieldLabel>
                             <Textarea
                                 id="message"
                                 name="message"
                                 placeholder="Add any comments"
-                                className={cn("resize-none")}
+                                className={cn(typography.largeTypo,"resize-none")}
                                 value={formData.message}
                                 onChange={onChange}
                                 disabled={loading}
