@@ -272,7 +272,7 @@ export default function StickySummary(
             >
                 <div className="flex w-full flex-col justify-center items-center md:items-start text-center md:text-left pl-0 md:pl-4">
                     {/* Mobile: Show title and summary */}
-                    <div className="md:hidden">
+                    <div className="md:hidden xl:hidden 2xl:hidden">
                         <h2 className={cn(typography.h3Typo, "mb-2")}>
                             {leftAside.title}
                         </h2>
