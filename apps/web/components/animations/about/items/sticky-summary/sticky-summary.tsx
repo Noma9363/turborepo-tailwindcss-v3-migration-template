@@ -9,6 +9,7 @@ import {
     typography
 } from "@workspace/ui/components/ui/tailwind-variations";
 import {PreviewCard} from "@/components/page-module/about/preview-card/preview-card";
+import {useMediaQuery} from "@workspace/ui/hooks/useMediaQuery.hook";
 
 
 export default function StickySummary(
@@ -33,6 +34,17 @@ export default function StickySummary(
     // icon component
     const Icon = iconCfg.icon;
 
+    const BREAKPOINTS = {
+        mobile: 480,
+        tablet: 768,
+        laptop: 1280,
+        desktop: 1440,
+    }
+
+    const isMobile = useMediaQuery(`(max-width: ${BREAKPOINTS.tablet - 1}px)`);
+
+
+
     //Animation
     useGSAP(
         () => {
@@ -43,6 +55,10 @@ export default function StickySummary(
                 return;
             }
 
+            // right-aside element
+            if(isMobile){
+                return ;
+            }
 
             const parentPenal = panelRef.current;
             const pinBoxEl = boxRef.current;
@@ -206,7 +222,7 @@ export default function StickySummary(
         ,
         {
             scope: panelRef,
-            dependencies: [isDev]
+            dependencies: [isDev, isMobile]
         }
     )
 
@@ -266,13 +282,15 @@ export default function StickySummary(
                 className={cn(
                     "aside aside--right opacity-0",
                     "col-span-1 md:col-start-7 md:col-end-11",
-                    "order-3 " +
-                    "pt-44"
+                    "order-3 ",
+                    "pt-44",
+                    "md:hidden",
+                    "md:pt-0"
                 )}
             >
                 <div className="flex w-full flex-col justify-center items-center md:items-start text-center md:text-left pl-0 md:pl-4">
                     {/* Mobile: Show title and summary */}
-                    <div className="md:hidden xl:hidden 2xl:hidden">
+                    <div className="md:hidden">
                         <h2 className={cn(typography.h3Typo, "mb-2")}>
                             {leftAside.title}
                         </h2>
@@ -283,7 +301,7 @@ export default function StickySummary(
                     {/* Desktop: Show PreviewCard */}
                     <div className="hidden md:block">
                         {/* <PreviewCard/> */}
-                        <p className=" hidden lg:block font-mono text-sm font-light">
+                        <p className="font-mono text-sm font-light">
                             {rightAside.summary}
                         </p>
                     </div>

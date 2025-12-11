@@ -28,7 +28,7 @@ export default function StickyScroll() {
     }
 
     const getIconFontSize = () => {
-        if(isMobile) return 32;
+        if(isMobile) return 36;
         if(isTablet) return 48;
         if(isLaptop) return 56;
         return 56;
