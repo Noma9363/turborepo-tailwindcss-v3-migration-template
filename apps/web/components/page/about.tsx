@@ -45,9 +45,9 @@ export const About = () => {
                 <div className="pb-12"></div>
                 <HorizontalScroll/>
                 <div className="py-12">
-                    <Card variant="glass" className={cn(typography.leadTypo, "w-full px-8 break-all")}>
-                        "기본적인 디자인 툴을 사용할 수 있으며, 웹 구축을 위한 시멘틱 태그의 구성과 CSS 스타일링 기법, 타입 안정성을 위해 typescript 를 사용합니다.
-                        UI 라이브러리는 기본적인 외형과 기능을 가지고 있는 "shadcn/ui" 를 사용함과 동시에 해당 UI 를 활용하는 모노레포 구축 시스템 "Turborepo" 를 사용합니다."
+                    <Card variant="glass" className={cn(typography.leadTypo, "w-full px-8 break-after-avoid")}>
+                        "기본적인 디자인 툴을 사용할 수 있으며, 웹 구축을 위한 시멘틱 태그의 구성과 CSS 스타일링 기법, 타입 안정성을 위해 typescript 를 사용합니다.<br/>
+                        UI 라이브러리는 기본적인 외형과 기능을 가지고 있는 "shadcn/ui" 를 사용함과 동시에 해당 UI 를 활용하는 모노레포 구축 시스템 <br/>"Turborepo" 를 사용합니다."
                     </Card>
                 </div>
             </section>

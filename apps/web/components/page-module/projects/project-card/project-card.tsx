@@ -31,16 +31,16 @@ export const ProjectCard = (
         <Card
 
             variant="glass"
-            className={cn(" rounded-md overflow-hidden w-full h-fit " +
-                " flex flex-col p-0 gap-4 " + className)}
+            className={cn(" rounded-md overflow-hidden w-full h-fit min-h-[420px] " +
+                " flex flex-col p-0 gap-4 justify-around" + className)}
         >
             <CardContent className={cn("bg-blue-950 h-40 p-6")}>
                 {img}
                 img example
             </CardContent>
             {/*description area*/}
-            <div className={cn(" flex-1 flex flex-col justify-start h-44 py-4")}>
-                <CardHeader className={cn("flex flex-col flex-1")}>
+            <div className={cn(" flex-1 flex flex-col  h-44 py-4")}>
+                <CardHeader className={cn("flex flex-col flex-1 justify-around")}>
                     <CardTitle className="">
                         <p className={cn("")}>
                             {title}
@@ -51,7 +51,7 @@ export const ProjectCard = (
                             ))}
                         </p>
                     </CardTitle>
-                    <CardDescription className={cn("flex flex-col justify-around gap-4")}>
+                    <CardDescription className={cn("flex flex-col  gap-4")}>
                         <p className={cn("h-1/3 overflow-hidden text-ellipsis pb-6")}>
                             {description}
                         </p>

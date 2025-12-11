@@ -15,24 +15,26 @@ export const Projects = () => {
 
     const dummyProjects:ProjectCardType[] = [
         {
-            title: 'title 1',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem',
-            img: ''
+            title: '피규어 쇼핑몰',
+            desc: '레진 재질 기반 피규어 쇼핑몰 사이트입니다. UI 라이브러리는 Mui 를 사용하였고 아토믹 디자인 방식으로 구성되어 있습니다.',
+            img: '',
+            link: 'https://shop-web-inquiry-demo.vercel.app/',
         },
         {
-            title: 'title 2',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem',
-            img: ''
+            title: '젠하이저 리브랜딩',
+            desc: '기존 젠하이저 사이트를 리모델링 해봤습니다. UI 라이브러리는 shadcn/ui 를 사용하였고 협업프로젝트인 만큼 디렉토리 공유성에 초점을 두었습니다.',
+            img: '',
+            link: ''
         },
         {
-            title: 'title 3',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem' +
+            title: 'Fetch',
+            desc: '간단한 패치 앱' +
                 '',
             img: ''
         },
         {
-            title: 'title 4',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem',
+            title: 'Firebase',
+            desc: 'form 이벤트로 db를 firebase 에 저장하는 앱',
             img: ''
         },
         {
@@ -57,14 +59,16 @@ export const Projects = () => {
             {/* too much gap for prev element */}
             {/*<HorizontalScroll/>*/}
 
-            <div className="page-container flex flex-col gap-12 h-auto overflow-y-clip overflow-container">
+            <div className="page-container grid sm:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-4 h-auto overflow-y-clip overflow-container">
                 {dummyProjects.map((dummyProject, index)=>(
                     <ProjectScroll
-                        panelClassName={cn(" ")}
+                        panelClassName={cn("")}
                         key={`${dummyProject.title}${index}`}
                         title={dummyProject.title}
                         desc={dummyProject.desc}
-                        img={dummyProject.img} isDev
+                        img={dummyProject.img}
+                        link={dummyProject.link}
+                        isDev
                     />
                 ))}
             </div>

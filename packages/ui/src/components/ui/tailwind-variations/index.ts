@@ -1,7 +1,7 @@
 export const typography = {
     h1Typo : "scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance",
     h2Typo : "scroll-m-20 border-b pb-2 text-8xl font-semibold tracking-tight first:mt-0",
-    h3Typo : "scroll-m-20 text-4xl font-semibold tracking-tight",
+    h3Typo : "scroll-m-20 sm:text-xl md:text-3xl lg:text-4xl text-4xl font-semibold tracking-tight ",
     h4Typo : "scroll-m-20 text-xl font-semibold tracking-tight",
     pTypo : "leading-7",
     blockquoteTypo : "italic",

@@ -10,6 +10,7 @@ interface HorizontalSectionProps extends HorizontalIconsScrollProps {
 }
 
 const HorizontalSection = React.forwardRef<HTMLDivElement, HorizontalSectionProps>(
+
     ({iconCfg, metaBallsCfg, title}, ref) => {
 
         const Icon = iconCfg.icon;
@@ -23,6 +24,7 @@ const HorizontalSection = React.forwardRef<HTMLDivElement, HorizontalSectionProp
                     "")}>
                     <IconBox
                         size={iconCfg.iconSize}
+                        className={cn("aspect-square")}
                         metaBallsColorCfg={metaBallsCfg}
                     >
                         <Icon style={iconCfg.style} size={44}/>

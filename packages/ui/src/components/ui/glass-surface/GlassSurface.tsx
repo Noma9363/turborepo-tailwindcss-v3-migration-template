@@ -87,7 +87,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
             const isWebKit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
             const isFirefox = /Firefox/.test(navigator.userAgent);
 
-            if(isWebKit || isFirefox){
+            if(isFirefox){
                 return false;
             }
 

@@ -17,7 +17,8 @@ export default function StickySummary(
         iconCfg,
         metaBallsCfg,
         leftAside,
-        rightAside
+        rightAside,
+        fontSize
     }: gsapItemProps
 ) {
     const defaultFontStyles = " scroll-m-20 font-extrabold tracking-tight text-balance ";
@@ -148,8 +149,8 @@ export default function StickySummary(
             const asideLeftFadeOutTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `bottom-=${parentHeight * 0.4} center`,
-                    end: `bottom-=${parentHeight * 0.2} center`,
+                    start: `bottom-=${parentHeight * 0.2} center`,
+                    end: `bottom center`,
                     scrub: 1,
                     markers: isDev
                 }
@@ -164,8 +165,8 @@ export default function StickySummary(
             const asideRightFadeInTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `top+=${parentHeight * 0.2} center`,
-                    end: `top+=${parentHeight * 0.4} center`,
+                    start: `top+=${parentHeight * 0.4} center`,
+                    end: `top+=${parentHeight * 0.8} center`,
                     scrub: 1,
                     markers: isDev
                 }
@@ -182,8 +183,8 @@ export default function StickySummary(
             const asideRightFadeOutTrEle = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `bottom-=${parentHeight * 0.4} center`,
-                    end: `bottom-=${parentHeight * 0.2} center`,
+                    start: `bottom-=${parentHeight * 0.2} center`,
+                    end: `bottom center`,
                     scrub: 1,
                     markers: isDev
                 }
@@ -221,12 +222,21 @@ export default function StickySummary(
     return (
         <div
             ref={panelRef}
-            className={cn("panel--area h-screen " +
-                "grid grid-cols-10 items-start align-top gap-0 "
+            className={cn(
+                "panel--area h-screen",
+                // Responsive grid: stack on mobile, 3-column on desktop
+                "grid grid-cols-1 md:grid-cols-10",
+                "items-center", //
+                "gap-4 md:gap-0",
+                "px-4 md:px-0"
             )}
         >
-            <div ref={asideLeftRef} className="aside col-start-1 col-end-5
-            aside--left opacity-0 ">
+            <div ref={asideLeftRef} className={cn(
+                "aside aside--left opacity-0",
+                "hidden md:block",
+                "md:col-start-1 md:col-end-5",
+                "order-1 md:order-1"
+            )}>
                 <div className="flex w-full flex-col h-full items-end justify-start pl-4 text-end gap-0.5">
                     <h2 className={cn(typography.h3Typo)}>
                         {leftAside.title}
@@ -236,23 +246,47 @@ export default function StickySummary(
                     </p>
                 </div>
             </div>
-            <div className={cn("col-start-5 col-end-7 flex w-full justify-center items-center " +
-                "flex-shrink-0")}>
+            <div className={cn(
+                "flex w-full justify-center items-center",
+                "col-span-1 md:col-start-5 md:col-end-7",
+                "order-2"
+            )}>
                 <IconBox
                     ref={boxRef}
-                    className="
-                    box--pin text-white opacity-0"
+                    className="box--pin text-white opacity-0"
                     size={iconCfg.iconSize}
                     metaBallsColorCfg={metaBallsCfg}
                     data-speed="0.1"
                 >
-                    <Icon size={56} style={iconCfg.style}/>
+                    <Icon size={fontSize} style={iconCfg.style}/>
                 </IconBox>
             </div>
-            <div ref={asideRightRef} className="aside col-start-7 col-end-11
-            aside--right opacity-0">
-                <div className="flex w-full flex-col justify-start items-start">
-                   {/*<PreviewCard/>*/}
+            <div
+                ref={asideRightRef}
+                className={cn(
+                    "aside aside--right opacity-0",
+                    "col-span-1 md:col-start-7 md:col-end-11",
+                    "order-3 " +
+                    "pt-44"
+                )}
+            >
+                <div className="flex w-full flex-col justify-center items-center md:items-start text-center md:text-left pl-0 md:pl-4">
+                    {/* Mobile: Show title and summary */}
+                    <div className="md:hidden">
+                        <h2 className={cn(typography.h3Typo, "mb-2")}>
+                            {leftAside.title}
+                        </h2>
+                        <p className="font-mono text-sm font-light">
+                            {rightAside.summary}
+                        </p>
+                    </div>
+                    {/* Desktop: Show PreviewCard */}
+                    <div className="hidden md:block">
+                        {/* <PreviewCard/> */}
+                        <p className=" hidden lg:block font-mono text-sm font-light">
+                            {rightAside.summary}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

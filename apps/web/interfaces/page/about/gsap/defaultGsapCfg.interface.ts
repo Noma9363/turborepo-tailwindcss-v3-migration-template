@@ -9,6 +9,7 @@ export type basicIconCfg = {
     iconSize: "sm" | "md" | "lg" | "xl" | "2xl";
     style?: React.CSSProperties;
     icon: IconType;
+    fontSize?: number;
 }
 
 export type metaBallsCfg = CSSMetaBallsProps;

@@ -4,6 +4,13 @@ const config: Config = {
     darkMode: "class",
     content: [], // Content will be added by each app
     theme: {
+        screens:{
+          'sm' : '480px',
+          'md' : '768px',
+          'lg' : '1280px',
+          'xl' : '1440px',
+          '2xl' : '1536px'
+        },
         extend: {
             colors: {
                 border: "oklch(var(--border) / <alpha-value>)",

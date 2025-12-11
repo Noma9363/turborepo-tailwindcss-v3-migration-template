@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/hooks/useMediaQuery.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/animations/about/items/horizontal-item/horizontal-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/animations/about/items/horizontal-item/horizontal-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/animations/about/items/sticky-summary/sticky-summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/animations/about/items/sticky-summary/sticky-summary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/animations/about/sticky-scroll/sticky-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/animations/about/sticky-scroll/sticky-scroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-card/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-card/project-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/page/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/page/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/interfaces/page/about/gsap/defaultGsapCfg.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/interfaces/page/about/gsap/defaultGsapCfg.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/interfaces/page/about/sticky-scroll-interface.interfeac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/interfaces/page/about/sticky-scroll-interface.interfeac.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/interfaces/page/projects/projectCard/projectCard.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/interfaces/page/projects/projectCard/projectCard.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/components/ui/glass-surface/GlassSurface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/components/ui/glass-surface/GlassSurface.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/components/ui/tailwind-variations/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/components/ui/tailwind-variations/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,27 +55,27 @@
     <option name="showModules" value="false" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/joihan/Documents/turborepo-tailwindcss-v3-migration-template",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.533107",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/joihan/Documents/turborepo-tailwindcss-v3-migration-template/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joihan/Documents/turborepo-tailwindcss-v3-migration-template&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.533107&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/joihan/Documents/turborepo-tailwindcss-v3-migration-template/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -103,7 +116,8 @@
       <workItem from="1765346056954" duration="169000" />
       <workItem from="1765346238680" duration="59000" />
       <workItem from="1765346332295" duration="12000" />
-      <workItem from="1765346354556" duration="4863000" />
+      <workItem from="1765346354556" duration="5391000" />
+      <workItem from="1765377816430" duration="10746000" />
     </task>
     <servers />
   </component>

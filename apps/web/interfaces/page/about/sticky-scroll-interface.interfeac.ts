@@ -14,6 +14,7 @@ export interface gsapItemProps {
     }
     rightAside:{
         summary: string;
-    }
+    },
+    fontSize?: number;
 
 }

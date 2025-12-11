@@ -12,6 +12,7 @@ interface ProjectScrollProps {
     desc: string;
     img?: React.ReactNode;
     panelClassName?: string;
+    link?: string;
 }
 
 export const ProjectScroll = (
@@ -20,7 +21,8 @@ export const ProjectScroll = (
         title,
         desc,
         img,
-        panelClassName
+        panelClassName,
+        link
     }: ProjectScrollProps
 ) => {
     const panelRef = React.useRef<HTMLDivElement>(null);
@@ -71,14 +73,15 @@ export const ProjectScroll = (
     return (
         <div
             ref={panelRef}
-            className={cn("" +
-                "project-article " +
-                "flex flex-row " +
-                "w-full " +
-                "gap-8 " +
-                "justify-around " +
-                "items-center " +
-                "" + panelClassName)}
+            className={cn(
+                "project-article " ,
+                "flex flex-row " ,
+                "w-full " ,
+                "gap-8 " ,
+                "justify-around " ,
+                "items-center " ,
+                "",
+                panelClassName)}
         >
             <div
                 ref={cardRef}
@@ -89,6 +92,7 @@ export const ProjectScroll = (
                     title={title}
                     img={img}
                     description={desc}
+                    link={link}
                 />
             </div>
         </div>
