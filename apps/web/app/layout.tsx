@@ -13,24 +13,17 @@ import {SmoothScrollProvider} from "@/components/smooth-scroll-provider/smooth-s
 
 /* font setup */
 const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    display: 'swap'
+    subsets: ['latin'], variable: '--font-inter', display: 'swap'
 });
 
 const notoSansKr = Noto_Sans_KR({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
-    variable: '--font-noto-sans-kr',
-    display: 'swap'
+    subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-noto-sans-kr', display: 'swap'
 });
 
 
 export const metadata: Metadata = {
-    title: "Mono Portfolio Layout",
-    description: "Portfolio built with Turborepo",
-    other:{
-        'darkreader-lock' : ''
+    title: "Mono Portfolio Layout", description: "Portfolio built with Turborepo", other: {
+        'darkreader-lock': ''
     }
 }
 
@@ -39,19 +32,17 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode
 }>) {
-    return (
-        <html lang="ko" className={cn(`scroll-smooth ${GeistSans.variable} ${notoSansKr.variable}`)} suppressHydrationWarning>
+    return (<html lang="ko" className={cn(`scroll-smooth ${GeistSans.variable} ${notoSansKr.variable}`)}
+                  suppressHydrationWarning>
         <head>
-            <meta name='darkreader-lock' content="" />
+            <meta name='darkreader-lock' content=""/>
             <title>Joy Han</title>
         </head>
         <body className={cn(`antialiased relative`, GeistSans.className)}>
         <SmoothScrollProvider>
-
-
-        <FloatingNav/>
+            <FloatingNav/>
             <Providers>
-                    {children}
+                {children}
             </Providers>
             <footer className="page-container">
                 <Separator className={cn("my-4")}/>
@@ -69,6 +60,5 @@ export default function RootLayout({
             </footer>
         </SmoothScrollProvider>
         </body>
-        </html>
-    )
+        </html>)
 }

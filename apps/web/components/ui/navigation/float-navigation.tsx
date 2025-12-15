@@ -79,7 +79,8 @@ export const FloatingNav = () => {
                         key={singleItemParam.href}
                         href={singleItemParam.href}
                         title={singleItemParam.title}
-                        onClick={(e) => scrollToSection(e, singleItemParam.href)}
+                        // link to scrolling
+                        onClick={(e) => handleScroll(e, singleItemParam.href)}
                         className={cn(
                             navigationMenuTriggerStyle(), " bg-primary-foreground hover:bg-accent-foreground" +
                             " hover:text-secondary ",

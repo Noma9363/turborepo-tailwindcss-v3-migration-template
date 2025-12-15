@@ -16,6 +16,10 @@ export function SmoothScrollProvider({children}:{children: React.ReactNode}){
             smoothWheel: true
         })
 
+        // expose globally
+        // @ts-ignore
+        window.lenis = lenis
+
         /** raf: Request Animation Frame */
         function raf(time: number){
             lenis.raf(time); // update scroll pos smoothly
