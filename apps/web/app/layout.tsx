@@ -6,7 +6,10 @@ import {FloatingNav} from "@/components/ui/navigation/float-navigation";
 import {Separator} from "@workspace/ui/components/ui/separator";
 import {cn} from "@workspace/ui/lib/utils";
 import {Inter, Noto_Sans_KR} from "next/font/google";
+
+import "@workspace/ui/styles/globals.scss";
 import "./page.scss";
+import {SmoothScrollProvider} from "@/components/smooth-scroll-provider/smooth-scroll-provider";
 
 /* font setup */
 const inter = Inter({
@@ -43,6 +46,9 @@ export default function RootLayout({
             <title>Joy Han</title>
         </head>
         <body className={cn(`antialiased relative`, GeistSans.className)}>
+        <SmoothScrollProvider>
+
+
         <FloatingNav/>
             <Providers>
                     {children}
@@ -61,6 +67,7 @@ export default function RootLayout({
                     </section>
                 </div>
             </footer>
+        </SmoothScrollProvider>
         </body>
         </html>
     )
