@@ -3,6 +3,12 @@
 import React from 'react';
 import Lenis from 'lenis';
 
+declare global {
+    interface Window {
+        lenis?: Lenis;
+    }
+}
+
 export function SmoothScrollProvider({children}:{children: React.ReactNode}){
     // when component mounted...
     React.useEffect(()=>{
@@ -17,7 +23,6 @@ export function SmoothScrollProvider({children}:{children: React.ReactNode}){
         })
 
         // expose globally
-        // @ts-ignore
         window.lenis = lenis
 
         /** raf: Request Animation Frame */
