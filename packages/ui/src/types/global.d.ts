@@ -2,6 +2,6 @@ import Lenis from "lenis"
 
 declare global{
     interface Window{
-        lenis: Lenis | null
+        lenis?: any;
     }
 }
