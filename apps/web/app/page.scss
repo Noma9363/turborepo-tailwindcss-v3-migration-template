@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 .page-root{
   // @include resize-root-padding;
 }
