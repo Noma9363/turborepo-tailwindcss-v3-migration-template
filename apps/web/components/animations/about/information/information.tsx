@@ -54,7 +54,7 @@ export const InformationModule = () => {
     });
 
     return (
-        <div className={cn("parent")} ref={containerRef}>
+        <div className={cn("parent", "max-w-prose")} ref={containerRef}>
             <div data-speed="1.2" className="cont cont__1 h-full ">
                 <Card
                     variant="glass"
@@ -79,7 +79,7 @@ export const InformationModule = () => {
                         <CardTitle className={cn(typography.h3Typo)}>Joy han.</CardTitle>
                         <CardDescription className={cn(typography.largeTypo + " h-fit pt-2")}>조이한.</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(typography.leadTypo + " leading-snug")}>미디어 디자인을 전공하고, <br/>동적인 웹기능과 애니메이션에 관심이 많습니다.</CardContent>
+                    <CardContent className={cn(typography.leadTypo,"leading-relaxed break-keep")}>미디어 디자인 전공 | 인터랙티브 웹 & 모션</CardContent>
                 </Card>
             </div>
             <div data-speed="1.2" className={cn("cont cont__3 h-full")}>
@@ -88,9 +88,9 @@ export const InformationModule = () => {
                         <CardTitle className={cn(typography.h3Typo)}>Priority</CardTitle>
                         <CardDescription className={cn(typography.largeTypo + " h-fit pt-2")}>우선순위.</CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(typography.leadTypo + " leading-snug")}>
-                        협업을 위해 프로젝트 시스템 준비 및 코드 스타일과 <br/>
-                        디렉토리 관리를 우선시 합니다.
+                    <CardContent className={cn(typography.leadTypo,"leading-relaxed break-keep")}>
+                        협업 효율을 위한 프로젝트 구조 설계,
+                        코드 컨벤션, 그리고 체계적인 디렉토리 관리를 중요시합니다.
                     </CardContent>
                 </Card>
             </div>
@@ -101,11 +101,11 @@ export const InformationModule = () => {
                     <CardHeader className="justify-start gap-0">
                         <CardTitle className={cn(typography.h3Typo)}>Soon.</CardTitle>
                         <CardDescription className={cn(typography.largeTypo + " h-fit pt-2")}>
-                            나중에.
+                            추후...
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(typography.leadTypo + " leading-snug")}>
-                        외부 데이터를 받아와 <code>"Pixi js"</code> 로 렌더링 하기
+                    <CardContent className={cn(typography.leadTypo,"leading-relaxed break-keep")}>
+                        PixiJS 기반 데이터 시각화 예정
                     </CardContent>
                 </Card>
             </div>
@@ -121,8 +121,8 @@ export const InformationModule = () => {
                             기타.
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className={cn(typography.leadTypo + " leading-snug")}>
-                        ...
+                    <CardContent className={cn(typography.leadTypo, "leading-loose break-keep")}>
+                        더 많은 프로젝트 준비 중
                     </CardContent>
                 </Card>
             </div>

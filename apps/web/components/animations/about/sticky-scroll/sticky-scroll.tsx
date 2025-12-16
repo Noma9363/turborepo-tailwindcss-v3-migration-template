@@ -35,7 +35,7 @@ export default function StickyScroll() {
     }
 
     return (
-        <div
+        <div className="w-full"
         >
             {StickyScrollDummy.map((stickyDummyItem) => {
                 return (

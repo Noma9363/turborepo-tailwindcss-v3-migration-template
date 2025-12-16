@@ -9,6 +9,8 @@ import {gsap, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 import '../styles/hero.scss';
 import React from "react";
 import CSSMetaBalls from "@workspace/ui/components/reactbits/css-metaballs/CSSMetaBalls";
+import StickyScroll from "@/components/animations/about/sticky-scroll/sticky-scroll";
+import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 
 export const Hero = () => {
     // for metaBalls type
@@ -103,9 +105,10 @@ export const Hero = () => {
                     <GlassSurface
                         {...glassSurfaceProps}
                     >
-                        <div className={cn("w-full backdrop-blur bg-whites bg-opacity-5")}>
-                            <p className={cn("text-white")}>
-                                <span>Eveniet harum impedit inventore molestias nesciunt quibusdam reiciendis tenetur velit voluptate voluptatibus. Beatae hic impedit libero magni! Consectetur, earum exercitationem fugiat impedit nemo odio porro voluptatum. Aspernatur facere id praesentium.</span>
+                        <div className={cn("max-w-prose bg-whites bg-opacity-5")}>
+                            <p className={cn(typography.leadTypo, "text-white")}>
+                                    Oops! Mobile isn't supported yet.
+                                    We're working on it — stay tuned!
                             </p>
                         </div>
                     </GlassSurface>

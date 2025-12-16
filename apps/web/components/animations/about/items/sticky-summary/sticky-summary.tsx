@@ -241,16 +241,16 @@ export default function StickySummary(
             className={cn(
                 "panel--area h-screen",
                 // Responsive grid: stack on mobile, 3-column on desktop
-                "grid grid-cols-1 md:grid-cols-10",
+                "grid grid-cols-1 md:grid-cols-[repeat(16,minmax(0,1fr))]",
                 "items-center", //
                 "gap-4 md:gap-0",
-                "px-4 md:px-0"
+                "px-4 md:px-12"
             )}
         >
             <div ref={asideLeftRef} className={cn(
                 "aside aside--left opacity-0",
                 "hidden md:block",
-                "md:col-start-1 md:col-end-5",
+                "md:col-start-5 md:col-end-8",
                 "order-1 md:order-1"
             )}>
                 <div className="flex w-full flex-col h-full items-end justify-start pl-4 text-end gap-0.5">
@@ -264,7 +264,7 @@ export default function StickySummary(
             </div>
             <div className={cn(
                 "flex w-full justify-center items-center",
-                "col-span-1 md:col-start-5 md:col-end-7",
+                "col-span-1 md:col-start-8 md:col-end-10",
                 "order-2"
             )}>
                 <IconBox
@@ -281,7 +281,7 @@ export default function StickySummary(
                 ref={asideRightRef}
                 className={cn(
                     "aside aside--right opacity-0",
-                    "col-span-1 md:col-start-7 md:col-end-11",
+                    "col-span-1 md:col-start-10 md:col-end-13",
                     "order-3 ",
                     "pt-44",
                     "md:hidden",
