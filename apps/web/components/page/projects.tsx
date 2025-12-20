@@ -11,20 +11,26 @@ import {Headline} from "@/components/common/headline/headline";
 import React from "react";
 import '../styles/projects.scss';
 
+import tn_img1 from '@workspace/assets/demo_thumb1.png';
+import tn_img2 from '@workspace/assets/demo_thumb2.png';
+
+
 export const Projects = () => {
 
     const dummyProjects:ProjectCardType[] = [
         {
             title: '피규어 쇼핑몰',
-            desc: '레진 재질 기반 피규어 쇼핑몰 사이트입니다. UI 라이브러리는 Mui 를 사용하였고 아토믹 디자인 방식으로 구성되어 있습니다.',
-            img: '',
+            desc: 'MUI 기반 협업 프로젝트',
+            img: tn_img1,
+            role: '레이아웃, 관리자, 문의, 상품관리',
             link: 'https://shop-web-inquiry-demo.vercel.app/',
         },
         {
             title: '젠하이저 리브랜딩',
-            desc: '기존 젠하이저 사이트를 리모델링 해봤습니다. UI 라이브러리는 shadcn/ui 를 사용하였고 협업프로젝트인 만큼 디렉토리 공유성에 초점을 두었습니다.',
-            img: '',
-            link: ''
+            desc: 'shadcn/ui 기반 협업 프로젝트',
+            role: '레이아웃, Outlet 중첩라우팅, 메인페이지, GNB',
+            img: tn_img2,
+            link: 'https://co-op-front-final.vercel.app/'
         },
         {
             title: 'Fetch',
@@ -59,14 +65,15 @@ export const Projects = () => {
             {/* too much gap for prev element */}
             {/*<HorizontalScroll/>*/}
 
-            <div className="page-container grid sm:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-4 h-auto overflow-y-clip overflow-container">
+            <div className="max-w-prose mx-auto pt-32 grid sm:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-4 overflow-y-clip overflow-container">
                 {dummyProjects.map((dummyProject, index)=>(
                     <ProjectScroll
-                        panelClassName={cn("")}
+                        panelClassName={cn("h-full")}
                         key={`${dummyProject.title}${index}`}
                         title={dummyProject.title}
                         desc={dummyProject.desc}
                         img={dummyProject.img}
+                        role={dummyProject.role}
                         link={dummyProject.link}
                         isDev
                     />

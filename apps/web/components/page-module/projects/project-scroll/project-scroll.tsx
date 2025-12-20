@@ -5,14 +5,11 @@ import {ProjectCard} from "@/components/page-module/projects/project-card/projec
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 import {gsap, useGSAP, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 import {cn} from "@workspace/ui/lib/utils";
+import {ProjectCardType} from "@/interfaces/page/projects/projectCard/projectCard.interface";
 
-interface ProjectScrollProps {
+interface ProjectScrollProps extends ProjectCardType{
     isDev?: boolean;
-    title: string;
-    desc: string;
-    img?: React.ReactNode;
     panelClassName?: string;
-    link?: string;
 }
 
 export const ProjectScroll = (
@@ -21,6 +18,7 @@ export const ProjectScroll = (
         title,
         desc,
         img,
+        role,
         panelClassName,
         link
     }: ProjectScrollProps
@@ -76,22 +74,24 @@ export const ProjectScroll = (
             className={cn(
                 "project-article " ,
                 "flex flex-row " ,
-                "w-full " ,
+                "w-full mx-auto" ,
                 "gap-8 " ,
                 "justify-around " ,
                 "items-center " ,
-                "",
+                "h-full",
                 panelClassName)}
         >
             <div
                 ref={cardRef}
                 data-speed="2"
-                className={cn("flex-1")}
+                className={cn("flex-1 h-full")}
             >
                 <ProjectCard
+                    className="h-full"
                     title={title}
                     img={img}
-                    description={desc}
+                    desc={desc}
+                    role={role}
                     link={link}
                 />
             </div>

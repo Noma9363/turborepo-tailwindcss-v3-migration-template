@@ -6,13 +6,11 @@ import {Badge} from "@workspace/ui/components/ui/badge";
 import {Button} from "@workspace/ui/components/ui/button";
 import {cn} from "@workspace/ui/lib/utils";
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
+import Image from "next/image";
+import {ProjectCardType} from "@/interfaces/page/projects/projectCard/projectCard.interface";
 
-export interface ProjectCardProps {
+export interface ProjectCardProps extends ProjectCardType{
     ref?: React.RefObject<HTMLDivElement | null>;
-    title: string;
-    description: string;
-    img: React.ReactNode;
-    link?: string;
     tags?: string[];
     className?: string;
 }
@@ -20,7 +18,8 @@ export interface ProjectCardProps {
 export const ProjectCard = (
     {
         title,
-        description,
+        desc,
+        role,
         img,
         link,
         tags,
@@ -31,12 +30,15 @@ export const ProjectCard = (
         <Card
 
             variant="glass"
-            className={cn(" rounded-md overflow-hidden w-full h-fit min-h-[420px] " +
-                " flex flex-col p-0 gap-4 justify-around" + className)}
+            className={cn(
+                "rounded-md overflow-hidden w-full min-h-[420px]",
+                "flex flex-col p-0 gap-0",
+                className
+            )}
         >
-            <CardContent className={cn("bg-blue-950 h-40 p-6")}>
-                {img}
-                img example
+            <CardContent className={cn("bg-white h-40 p-6 overflow-hidden shadow-inner relative")}>
+                {img && <Image className="rounded shadow-inner absolute top-0 left-0 right-0" src={img} alt={`thumbnail of ${img}`}/>}
+                {!img && "img example"}
             </CardContent>
             {/*description area*/}
             <div className={cn(" flex-1 flex flex-col  h-44 py-4")}>
@@ -51,9 +53,12 @@ export const ProjectCard = (
                             ))}
                         </p>
                     </CardTitle>
-                    <CardDescription className={cn("flex flex-col  gap-4")}>
-                        <p className={cn(typography.leadTypo ,"h-1/3 overflow-hidden text-ellipsis pb-6")}>
-                            {description}
+                    <CardDescription className={cn("flex flex-col justify-around break-before-all gap-4")}>
+                        <p className={cn(typography.leadTypo ,"h-1/3 pb-6")}>
+                            {desc}
+                        </p>
+                        <p className={cn(typography.smallTypo ,"h-1/3 pb-6")}>
+                            {role}
                         </p>
                         <Button
                             className={cn("w-fit")}

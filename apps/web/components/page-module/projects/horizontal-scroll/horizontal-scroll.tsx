@@ -12,35 +12,35 @@ export const HorizontalScroll = () => {
     const dummyCardData:ProjectCardProps[] = [
         {
             title: 'Project-1',
-            description: "this is Desc BlaBla...",
+            desc: "this is Desc BlaBla...",
             link: '',
             tags: ['A', 'B' , 'C', 'D'],
             img: ''
         },
         {
             title: 'Project-2',
-            description: "this is Desc BlaBla...",
+            desc: "this is Desc BlaBla...",
             link: '',
             tags: ['A', 'B' , 'C', 'D'],
             img: ''
         },
         {
             title: 'Project-3',
-            description: "this is Desc BlaBla...",
+            desc: "this is Desc BlaBla...",
             link: '',
             tags: ['A', 'B' , 'C', 'D'],
             img: ''
         },
         {
             title: 'Project-4',
-            description: "this is Desc BlaBla...",
+            desc: "this is Desc BlaBla...",
             link: '',
             tags: ['A', 'B' , 'C', 'D'],
             img: ''
         },
         {
             title: 'Project-5',
-            description: "this is Desc BlaBla...",
+            desc: "this is Desc BlaBla...",
             link: '',
             tags: ['A', 'B' , 'C', 'D'],
             img: ''
@@ -87,7 +87,7 @@ export const HorizontalScroll = () => {
             {dummyCardData.map((cardData, index)=>(
                 <div key={`${index}${cardData.title}`} className={cn("slide box-border")}>
                     <div className={cn("slide__bg box-border w-full pl-8 rounded-md")}>
-                        <ProjectCard key={`card${cardData.title}-${cardData.link}`} title={cardData.title} description={cardData.description} img={cardData.img} link={cardData.link} tags={cardData.tags} />
+                        <ProjectCard key={`card${cardData.title}-${cardData.link}`} title={cardData.title} desc={cardData.desc} img={cardData.img} link={cardData.link} tags={cardData.tags} />
                     </div>
                 </div>
             ))}
