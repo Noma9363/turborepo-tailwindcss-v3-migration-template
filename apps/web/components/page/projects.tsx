@@ -13,6 +13,8 @@ import '../styles/projects.scss';
 
 import tn_img1 from '@workspace/assets/demo_thumb1.png';
 import tn_img2 from '@workspace/assets/demo_thumb2.png';
+import th_img3 from '@workspace/assets/demo_thumb4.png';
+import th_img4 from '@workspace/assets/demo_thumb3.png';
 
 
 export const Projects = () => {
@@ -33,26 +35,20 @@ export const Projects = () => {
             link: 'https://co-op-front-final.vercel.app/'
         },
         {
+            title: 'Todo',
+            desc: '모듈형식, TailwindCss, 등록|삭제|검색',
+            role: '배럴 모듈, TailwindCss',
+            img: th_img3,
+            link: 'https://react-vite-todo-vervel.vercel.app/'
+
+        },
+        {
             title: 'Fetch',
-            desc: '간단한 패치 앱' +
-                '',
-            img: ''
-        },
-        {
-            title: 'Firebase',
-            desc: 'form 이벤트로 db를 firebase 에 저장하는 앱',
-            img: ''
-        },
-        {
-            title: 'title 5',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem',
-            img: ''
-        },
-        {
-            title: 'title 6',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos facere qui. Ad autem',
-            img: ''
-        },
+            desc: 'FireBase 를 활용한 간단한 패치 앱',
+            role: 'firebase, TypeScript',
+            img: th_img4,
+            link: 'https://contact-firebase-react-app.vercel.app/'
+        }
     ]
 
 

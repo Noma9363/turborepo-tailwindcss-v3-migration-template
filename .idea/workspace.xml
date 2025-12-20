@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/page-module/projects/horizontal-scroll/horizontal-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page-module/projects/horizontal-scroll/horizontal-scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-card/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-card/project-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page-module/projects/project-scroll/project-scroll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/page/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/interfaces/page/projects/projectCard/projectCard.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/interfaces/page/projects/projectCard/projectCard.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,9 @@
       <workItem from="1765866276904" duration="7162000" />
       <workItem from="1765885021879" duration="1424000" />
       <workItem from="1766114896395" duration="1645000" />
-      <workItem from="1766189705777" duration="5922000" />
+      <workItem from="1766189705777" duration="6395000" />
+      <workItem from="1766219306419" duration="1739000" />
+      <workItem from="1766227057046" duration="618000" />
     </task>
     <servers />
   </component>
