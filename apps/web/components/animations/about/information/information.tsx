@@ -68,8 +68,8 @@ export const InformationModule = () => {
                             Hello!
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className={cn("absolute w-full h-full p-0 top-0 right-0 bottom-0 left-0")}>
-                        <Image className={cn("thumbnail")} src={imgUrl} alt="hi"/>
+                    <CardContent className={cn("absolute aspect-square w-4 p-0 right-4 bottom-4")}>
+                        <Image className={cn("thumbnail rounded-full overflow")} src={imgUrl} alt="profile_image"/>
                     </CardContent>
                 </Card>
             </div>
