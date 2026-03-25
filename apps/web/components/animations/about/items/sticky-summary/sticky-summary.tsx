@@ -11,6 +11,8 @@ import {
 import {PreviewCard} from "@/components/page-module/about/preview-card/preview-card";
 import {useMediaQuery} from "@workspace/ui/hooks/useMediaQuery.hook";
 
+//
+
 
 export default function StickySummary({
                                           isDev, iconCfg, metaBallsCfg, leftAside, rightAside, fontSize
@@ -62,6 +64,14 @@ export default function StickySummary({
         const parentHeight = parentPenal.offsetHeight;
         const boxHeight = pinBoxEl.offsetHeight;
 
+
+        // GPU promote before animation starts
+        gsap.set(
+            isMobile
+                ? [pinBoxEl, pinContextElRight]
+                : [pinBoxEl, pinContextElLeft, pinContextElRight],
+            {willChange: "opacity, transform", force3D: true}
+        )
 
         // mobile animation
         if (isMobile) {
@@ -274,6 +284,33 @@ export default function StickySummary({
             triggersRef.current = [];
         }
     }, [leftAside.title])
+
+    // useEffect for ["visualViewport"] resize
+    // @ts-ignore
+    const resizeTimer = React.useRef<ReturnType<typeof setTimeout>>();
+    React.useEffect(()=>{
+        const onViewportResize = () => {
+            clearTimeout(resizeTimer.current); // clear previous time
+            resizeTimer.current = setTimeout(()=>{ // when setTimeout begin
+                ScrollTrigger.refresh(true);
+            }, 200); // debounce - chrome platform takes ~ 150 ms
+        };
+
+        // set event Listener
+        window.visualViewport?.addEventListener("resize", onViewportResize);
+
+        return()=>{
+            clearTimeout(resizeTimer.current);
+            // remove event Listener
+            window.visualViewport?.removeEventListener("resize", onViewportResize);
+            // release GPU memory on unmount
+            if(boxRef.current) gsap.set(boxRef.current, {willChange:"auto"});
+            if(asideLeftRef.current) gsap.set(asideLeftRef.current, {willChange:"auto"});
+            if(asideRightRef.current) gsap.set(asideRightRef.current, {willChange:"auto"});
+        }
+
+    }, [])
+
 
     return (<div
             ref={panelRef}

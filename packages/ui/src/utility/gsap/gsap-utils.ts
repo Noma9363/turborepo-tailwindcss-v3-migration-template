@@ -12,7 +12,26 @@ import {useGSAP} from "@gsap/react";
  * Reference: https://gsap.com/docs/v3/Installation?checked=core,scrollTrigger
  */
 if (typeof  window !== "undefined"){
+    /* register plugins */
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
+
+    /* config before any component creates a trigger */
+    // ignore MobileResize: stops recalculating on every iOS chrome show/hide
+    // limitCallbacks: batches rapid scroll events - reduces lag on low-end phones
+    ScrollTrigger.config({
+        ignoreMobileResize: true,
+        limitCallbacks: true
+    });
+
+    /* normalize iOS momentum scroll => scrub doesn't jump */
+    // allowNestedScroll: true keeps inner scrollable areas working
+    ScrollTrigger.normalizeScroll({
+        allowNestedScroll: true,
+        lockAxis: false, // off horizontal lock
+        // @ts-ignore
+        momentum: self=> Math.min(3, self.velocityY / 1000),
+    })
+
 }
 
 // Export GSAP and plugins
