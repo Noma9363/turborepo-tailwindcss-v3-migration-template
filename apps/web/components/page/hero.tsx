@@ -30,7 +30,7 @@ export const Hero = () => {
         className: cn("px-10 py-10"),
         width: "100%",
         height: "fit-content",
-        borderRadius: 32,
+        borderRadius: 16,
         backgroundOpacity: 0.1,
         saturation: 1,
         borderWidth: 0.1,
@@ -85,7 +85,7 @@ export const Hero = () => {
             </div>
             {/* context area start here*/}
             <section className={cn("page-container h-[100vh] flex flex-col align-middle justify-center gap-8")}>
-                <div className={cn("relative section card-parent w-full pointer-events-none")}>
+                <div className={cn("relative card-parent w-full pointer-events-none")}>
                     {/* heading area */}
                         <div className={cn("flex flex-col items-start justify-start gap-8")}>
                             <p className={cn("scroll-m-20 text-start text-sm font-bold text-white")}>

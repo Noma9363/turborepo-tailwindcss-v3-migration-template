@@ -16,13 +16,21 @@ import {Headline} from "@/components/common/headline/headline";
 export const About = () => {
 
 
-    return (<div className=" flex flex-col items-center justify-center min-h-screen w-full ">
-        <StickyScroll/>
+    return (<div className="page-container flex flex-col items-center justify-center min-h-screen">
         {/* for spacing */}
-        <div className="h-[50vh]"></div>
 
-        <section className={cn("page-container pb-12 flex flex-col justify-center items-center")}>
-            <div className="flex flex-col gap-2 w-full">
+        <div className="pt-32 pb-48 flex flex-col justify-center align-middle">
+            <SplitText
+                textAlign="center"
+                tag="h2"
+                text="모듈 • 일관 • 설명"
+                delay={300}
+                className={cn(typography.h2Typo + " w-full text-7xl border-0")}
+            />
+            <Headline level="lead" className={cn("pt-8")}>간단히 사용할 수 있으면서 모두가 이해할 수 있게</Headline>
+        </div>
+        <section className={cn("pb-12 w-full")}>
+            <div className="w-full flex flex-col gap-2">
                 <SplitText
                     textAlign="start"
                     tag="h3"
@@ -33,21 +41,11 @@ export const About = () => {
                 <Headline level="lead">cool Tools.</Headline>
             </div>
 
-            <div className="pb-12"></div>
+
             {/* too laggy need to optimize */}
             {/*<HorizontalScroll/>*/}
-            <div className="py-12">
-                <Card variant="glass"
-                      className={cn(typography.leadTypo, "max-w-prose px-10 py-8 flex flex-col gap-4 leading-relaxed tracking-wide")}>
-                    <p>
-
-                        Figma 를 통해 UI 를 디자인 하고, 시멘틱 HTML 과 TailwindCSS 로 웹을 구현합니다.
-                    </p>
-                    <p>
-                        타입 안전성을 위해 typeScript 를 사용하며, UI 컴포넌트는 shadcn/ui, 모노레포 관리는 Turborepo 로 구축합니다.
-                    </p>
-                </Card>
-            </div>
+            <StickyScroll/>
+            <div className="pb-12"></div>
         </section>
         {/* section-3 */}
         <section id="about" className={cn("page-container w-full flex flex-col items-center justify-stretch")}>

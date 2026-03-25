@@ -53,8 +53,8 @@ export const Projects = () => {
 
 
     return (
-        <div id="projects" className={cn("w-screen pt-16")}>
-            <div className={cn("flex rounded flex-col justify-center items-center page-container gap-2 ")}>
+        <div id="projects" className={cn("page-container pt-16")}>
+            <div className={cn("flex rounded flex-col justify-center items-center gap-2 ")}>
                 <Headline level="h2">Projects.</Headline>
                 <Headline level="lead">vite-react + typescript 로 제작한 페이지들입니다.</Headline>
             </div>
