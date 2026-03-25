@@ -34,7 +34,8 @@ export const About = () => {
             </div>
 
             <div className="pb-12"></div>
-            <HorizontalScroll/>
+            {/* too laggy need to optimize */}
+            {/*<HorizontalScroll/>*/}
             <div className="py-12">
                 <Card variant="glass"
                       className={cn(typography.leadTypo, "max-w-prose px-10 py-8 flex flex-col gap-4 leading-relaxed tracking-wide")}>
