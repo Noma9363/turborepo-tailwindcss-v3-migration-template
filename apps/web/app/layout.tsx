@@ -48,13 +48,7 @@ export default function RootLayout({
                 <Separator className={cn("my-4")}/>
                 <div className={cn("flex-col")}>
                     <section className={cn("pb-6")}>
-                        Copyright &copy; joyHan blabla
-                    </section>
-                    <section className={cn("pb-12")}>
-                        policy etc...
-                    </section>
-                    <section className={cn("pb-20")}>
-                        links
+                        Copyright &copy; joyHan
                     </section>
                 </div>
             </footer>

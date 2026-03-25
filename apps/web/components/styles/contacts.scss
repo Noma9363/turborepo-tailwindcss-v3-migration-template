@@ -1,0 +1,12 @@
+@use '@workspace/ui/styles/mixins' as *;
+#contact{
+}
+
+.page-container{
+  @include responsive-container;
+  @include resize-root-padding;
+
+  &.overflow-container{
+    padding-top: 8rem;
+  }
+}

@@ -30,10 +30,10 @@ export const ContactField = (
     }:ContactFieldProps
 ) => {
     return (
-        <div className={cn("page-container")} >
-            <Card variant="glass" className="max-w-md mx-auto">
+        <div className={cn("w-full")} >
+            <Card variant="glass" className="">
                 <CardHeader className={cn("pb-4")}>
-                    <CardDescription className={cn("w-fit ", typography.leadTypo)}>Contact field, Enter your email.</CardDescription>
+                    <CardDescription className={cn("", typography.leadTypo)}>Contact field, Enter your email.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form
