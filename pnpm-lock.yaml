@@ -145,6 +145,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.22
         version: 10.4.22(postcss@8.5.6)
+      baseline-browser-mapping:
+        specifier: ^2.10.8
+        version: 2.10.8
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -288,10 +291,10 @@ importers:
         version: 5.1.36
       '@vitest/browser-playwright':
         specifier: ^4.0.8
-        version: 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+        version: 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
       '@vitest/coverage-v8':
         specifier: ^4.0.8
-        version: 4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)
+        version: 4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -330,7 +333,7 @@ importers:
         version: 5.9.2
       vitest:
         specifier: ^4.0.8
-        version: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+        version: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
 
   packages/zustand:
     dependencies:
@@ -2027,8 +2030,9 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  baseline-browser-mapping@2.8.25:
-    resolution: {integrity: sha512-2NovHVesVF5TXefsGX1yzx1xgr7+m9JQenvz6FQY3qd+YXkKkYiv+vTCc7OriP9mcDZpTC5mAOYN4ocd29+erA==}
+  baseline-browser-mapping@2.10.8:
+    resolution: {integrity: sha512-PCLz/LXGBsNTErbtB6i5u4eLpHeMfi93aUv5duMmj6caNu6IphS4q6UevDnL36sZQv9lrP11dbPKGMaXPwMKfQ==}
+    engines: {node: '>=6.0.0'}
     hasBin: true
 
   basic-ftp@5.0.5:
@@ -5653,29 +5657,29 @@ snapshots:
       '@typescript-eslint/types': 8.39.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/browser-playwright@4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
+  '@vitest/browser-playwright@4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
     dependencies:
-      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       playwright: 1.56.1
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
     transitivePeerDependencies:
       - bufferutil
       - msw
       - utf-8-validate
       - vite
 
-  '@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
+  '@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)':
     dependencies:
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       '@vitest/utils': 4.0.8
       magic-string: 0.30.21
       pixelmatch: 7.1.0
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
       ws: 8.18.3
     transitivePeerDependencies:
       - bufferutil
@@ -5683,7 +5687,7 @@ snapshots:
       - utf-8-validate
       - vite
 
-  '@vitest/coverage-v8@4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)':
+  '@vitest/coverage-v8@4.0.8(@vitest/browser@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8))(vitest@4.0.8)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
       '@vitest/utils': 4.0.8
@@ -5696,9 +5700,9 @@ snapshots:
       magicast: 0.5.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vitest: 4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
     optionalDependencies:
-      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/browser': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -5711,13 +5715,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))':
+  '@vitest/mocker@4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))':
     dependencies:
       '@vitest/spy': 4.0.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vite: 7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
 
   '@vitest/pretty-format@4.0.8':
     dependencies:
@@ -5887,7 +5891,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  baseline-browser-mapping@2.8.25: {}
+  baseline-browser-mapping@2.10.8: {}
 
   basic-ftp@5.0.5: {}
 
@@ -5916,7 +5920,7 @@ snapshots:
 
   browserslist@4.28.0:
     dependencies:
-      baseline-browser-mapping: 2.8.25
+      baseline-browser-mapping: 2.10.8
       caniuse-lite: 1.0.30001754
       electron-to-chromium: 1.5.250
       node-releases: 2.0.27
@@ -8346,7 +8350,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1):
+  vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -8357,14 +8361,14 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.19.9
       fsevents: 2.3.3
-      jiti: 1.21.7
+      jiti: 2.6.1
       sass: 1.94.0
       terser: 5.44.1
 
-  vitest@4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1):
+  vitest@4.0.8(@types/node@20.19.9)(@vitest/browser-playwright@4.0.8)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1):
     dependencies:
       '@vitest/expect': 4.0.8
-      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))
+      '@vitest/mocker': 4.0.8(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))
       '@vitest/pretty-format': 4.0.8
       '@vitest/runner': 4.0.8
       '@vitest/snapshot': 4.0.8
@@ -8381,11 +8385,11 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1)
+      vite: 7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.19.9
-      '@vitest/browser-playwright': 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@1.21.7)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
+      '@vitest/browser-playwright': 4.0.8(playwright@1.56.1)(vite@7.2.2(@types/node@20.19.9)(jiti@2.6.1)(sass@1.94.0)(terser@5.44.1))(vitest@4.0.8)
     transitivePeerDependencies:
       - jiti
       - less

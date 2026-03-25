@@ -49,7 +49,6 @@ export default function StickyScroll() {
                         metaBallsCfg={stickyDummyItem.metaBallsCfg}
                         leftAside={stickyDummyItem.leftAside}
                         rightAside={stickyDummyItem.rightAside}
-
                     />
                 )
             })}
