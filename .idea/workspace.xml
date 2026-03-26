@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1bfdb98a-f019-4b68-8f3f-7f2078c692d3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/animations/about/horizontal-scroll/horizontal-scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/animations/about/horizontal-scroll/horizontal-scroll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/animations/about/information/information.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/animations/about/information/information.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/assets/Gemini_Generated_Image_eh4um2eh4um2eh4u.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/assets/Gemini_Generated_Image_eh4um2eh4um2eh4u.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/page/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/page/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/assets/pic_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/assets/pic_temp.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +156,8 @@
       <workItem from="1774409986357" duration="1295000" />
       <workItem from="1774412855119" duration="14035000" />
       <workItem from="1774438592335" duration="966000" />
+      <workItem from="1774487549525" duration="178000" />
+      <workItem from="1774487787458" duration="7595000" />
     </task>
     <servers />
   </component>

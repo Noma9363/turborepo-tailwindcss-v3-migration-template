@@ -39,12 +39,10 @@ export const About = () => {
                     className={cn(typography.h2Typo + " w-full text-7xl")}
                 />
                 <Headline level="lead">cool Tools.</Headline>
+                {/* too laggy need to optimize */}
+                <HorizontalScroll/>
             </div>
-
-
-            {/* too laggy need to optimize */}
-            {/*<HorizontalScroll/>*/}
-            <StickyScroll/>
+            {/*<StickyScroll/>*/}
             <div className="pb-12"></div>
         </section>
         {/* section-3 */}

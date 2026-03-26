@@ -3,7 +3,7 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
 import {cn} from "@workspace/ui/lib/utils";
 import React, {CSSProperties} from "react";
-import imgUrl from '@workspace/assets/pic_temp.png';
+import imgUrl from '@workspace/assets/pic_temp3.png';
 import Image from "next/image";
 import {gsap, useGSAP} from "@workspace/ui/utility/gsap/gsap-utils";
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
@@ -68,8 +68,9 @@ export const InformationModule = () => {
                             Hello!
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className={cn("absolute aspect-square w-4 p-0 right-4 bottom-4")}>
-                        <Image className={cn("thumbnail rounded-full overflow")} src={imgUrl} alt="profile_image"/>
+                    <CardContent  className={cn("")}>
+                        <div className={cn("bg-gradient-to-r from-blue-500 to-transparent")} />
+                        <Image className={cn("thumbnail object-cover h-full mix-blend-normal")} src={imgUrl} alt="profile_image"/>
                     </CardContent>
                 </Card>
             </div>
@@ -99,13 +100,13 @@ export const InformationModule = () => {
                     variant="glass"
                     className="card-parallax-inner w-full h-full">
                     <CardHeader className="justify-start gap-0">
-                        <CardTitle className={cn(typography.h3Typo)}>Soon.</CardTitle>
+                        <CardTitle className={cn(typography.h3Typo)}>What i do</CardTitle>
                         <CardDescription className={cn(typography.largeTypo + " h-fit pt-2")}>
-                            추후...
+                            무엇을 할 수 있냐면...
                         </CardDescription>
                     </CardHeader>
                     <CardContent className={cn(typography.leadTypo,"leading-relaxed break-keep")}>
-                        PixiJS 기반 데이터 시각화 예정
+                        figma 레이아웃 설계와 웹 개발을 병행합니다.
                     </CardContent>
                 </Card>
             </div>
@@ -122,7 +123,7 @@ export const InformationModule = () => {
                         </CardDescription>
                     </CardHeader>
                     <CardContent className={cn(typography.leadTypo, "leading-loose break-keep")}>
-                        더 많은 프로젝트 준비 중
+                        gsap 을 마스터 하고싶어요
                     </CardContent>
                 </Card>
             </div>
