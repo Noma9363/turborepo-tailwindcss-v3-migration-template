@@ -35,14 +35,6 @@ export const Projects = () => {
             link: 'https://shop-web-inquiry-demo.vercel.app/',
         },
         {
-            title: 'Todo',
-            desc: '모듈형식, TailwindCss, 등록|삭제|검색',
-            role: '배럴 모듈, TailwindCss',
-            img: th_img3,
-            link: 'https://react-vite-todo-vervel.vercel.app/'
-
-        },
-        {
             title: 'Fetch',
             desc: 'FireBase 를 활용한 간단한 패치 앱',
             role: 'firebase, TypeScript',
