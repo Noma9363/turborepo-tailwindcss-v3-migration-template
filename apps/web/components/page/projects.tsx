@@ -21,18 +21,18 @@ export const Projects = () => {
 
     const dummyProjects:ProjectCardType[] = [
         {
-            title: '피규어 쇼핑몰',
-            desc: 'MUI 기반 협업 프로젝트',
-            img: tn_img1,
-            role: '레이아웃, 관리자, 문의, 상품관리',
-            link: 'https://shop-web-inquiry-demo.vercel.app/',
-        },
-        {
             title: '젠하이저 리브랜딩',
             desc: 'shadcn/ui 기반 협업 프로젝트',
             role: '레이아웃, Outlet 중첩라우팅, 메인페이지, GNB',
             img: tn_img2,
             link: 'https://co-op-front-final.vercel.app/'
+        },
+        {
+            title: '피규어 쇼핑몰',
+            desc: 'MUI 기반 협업 프로젝트',
+            img: tn_img1,
+            role: '레이아웃, 관리자, 문의, 상품관리',
+            link: 'https://shop-web-inquiry-demo.vercel.app/',
         },
         {
             title: 'Todo',
