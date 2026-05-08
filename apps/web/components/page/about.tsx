@@ -43,7 +43,6 @@ export const About = () => {
             <div className="pb-12"></div>
         </section>
         <HorizontalScroll/>
-        {/* section-3 */}
         <section id="about" className={cn("page-container w-full flex flex-col items-center justify-stretch")}>
             <div
                 className={cn(" " + "w-full flex flex-col align-middle items-center justify-start" + " h-full gap-2")}
