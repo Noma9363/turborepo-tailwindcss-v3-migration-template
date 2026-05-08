@@ -36,8 +36,8 @@ export default function StickySummary({
         mobile: 480, tablet: 768, laptop: 1280, desktop: 1440,
     }
 
-    const isMobile = useMediaQuery(`(max-width: ${BREAKPOINTS.laptop - 1}px)`);
-
+    const isMobile = useMediaQuery(`(max-width: ${BREAKPOINTS.tablet - 1}px)`);
+    const isTablet = useMediaQuery(`(max-width: ${BREAKPOINTS.laptop - 1}px`);
 
     //Animation
     useGSAP(() => {
@@ -75,113 +75,20 @@ export default function StickySummary({
 
         // mobile animation
         if (isMobile) {
-            // reset the references properties
-            [boxRef.current, asideLeftRef.current, asideRightRef.current].forEach(el => {
-                if(!el) return; // if element is not defined escape
-                // resettling all element's style properties
-                el.style.opacity = "";
-                el.style.transform= "";
-                el.style.position= "";
-                el.style.top= "";
-                el.style.left= "";
-                el.style.width= "";
-                el.style.willChange= "";
-
-            });
-
-            // animation task
-            /** NOTE: ESCAPE PREVIOUS CODE LINE */
-
-            /** Box pined animation */
-            triggersRef.current.push(ScrollTrigger.create({
-                trigger: pinBoxEl,
-                start: `center+=${boxHeight} center+=${NAV_HEIGHT}px`,
-                end: `${(parentHeight - (boxHeight / 2))} center-=${boxHeight-NAV_HEIGHT}px`,
-                pin: true,
-                pinSpacing: false,
-                scrub: true,
-            }));
-
-            /** Box Fade In */
-            const boxFadeInTrEle = gsap.timeline({
-                scrollTrigger: {
-                    trigger: pinBoxEl,
-                    start: `bottom-=${parentHeight * 0.4} center`,
-                    end: `bottom-=${parentHeight * 0.2} center`,
-                    scrub: 1,
-                    markers: isDev
-                }
-            });
-            boxFadeInTrEle.fromTo(pinBoxEl, {opacity: 0}, {opacity: 1, duration: 1});
-            triggersRef.current.push(boxFadeInTrEle.scrollTrigger!);
-
-            /** Box Fade Out */
-            const boxFadeOutTrEle = gsap.timeline({
-                scrollTrigger: {
-                    trigger: pinBoxEl,
-                    start: `top+=${parentHeight * 0.2} center`,
-                    end: `top+=${parentHeight * 0.4} center`,
-                    scrub: 1,
-                    markers: isDev
-                }
-            });
-            boxFadeOutTrEle.to(pinBoxEl, {opacity: 0, duration: 0.5});
-            triggersRef.current.push(boxFadeOutTrEle.scrollTrigger!);
-
-            /** AsideRightContext PinBox */
-
-            const boxRect = pinBoxEl.getBoundingClientRect();
-            const rightContextRect = pinContextElRight.getBoundingClientRect();
-            // naturalGap = current target pos - boxReact's bottom pos
-            const naturalGap = rightContextRect.top - boxRect.bottom;
-
-            // set asideRightContext gap value
-            gsap.set(pinContextElRight,{
-                y: -(naturalGap - 4)
-            })
-            // insert animation of pinBox
-            triggersRef.current.push(ScrollTrigger.create({
-                trigger: pinBoxEl,
-                start: `center+=${boxHeight} center+=${NAV_HEIGHT}px`,
-                end: `${(parentHeight - (boxHeight / 2))} center-=${boxHeight-NAV_HEIGHT}px`,
-                pin: pinContextElRight,
-                pinSpacing: false,
-                scrub: true,
-            }));
-
-            /** Aside["Right"] Fade Effects*/
-
-            /** Aside["Right"] Fade In*/
-            const asideRightFadeInEl = gsap.timeline({
+            const tlTrg1 = gsap.timeline({
                 scrollTrigger:{
                     trigger: parentPenal,
-                    start: `top+=${parentHeight * 0.2} center`,
-                    end: `top+=${parentHeight * 0.4} center`,
-                    scrub: 1,
-                    markers: isDev
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    scrub: 1
                 }
             });
-            // set the fade-in's opacity and duration
-            asideRightFadeInEl.fromTo(pinContextElRight, {opacity: 0}, {opacity:1, duration: 1.5});
-            // insert fadeIn animation
-            triggersRef.current.push(asideRightFadeInEl.scrollTrigger!);
-
-            /** Aside["Right"] Fade Out*/
-            const asideRightFadeOutEl = gsap.timeline({
-                scrollTrigger:{
-                    trigger: parentPenal,
-                    start: `bottom-=${parentHeight * 0.25} center`,
-                    end: `bottom center`,
-                    scrub: 1,
-                    markers: isDev
-                }
-            });
-            // set the fade-in's opacity and duration
-            asideRightFadeOutEl.to([pinContextElRight], {opacity: 0, duration: 1});
-            // insert fadeIn animation
-            triggersRef.current.push(asideRightFadeOutEl.scrollTrigger!);
-
-
+            tlTrg1.fromTo([pinBoxEl, pinContextElRight],
+                {opacity:0, y:20},
+                {opacity: 1, y:0, stagger: 0.1}
+            );
+            // insert animation
+            triggersRef.current.push(tlTrg1.scrollTrigger!);
             ScrollTrigger.refresh();
             return ;
         }

@@ -9,7 +9,6 @@ import {gsap, ScrollTrigger} from "@workspace/ui/utility/gsap/gsap-utils";
 import '../styles/hero.scss';
 import React from "react";
 import CSSMetaBalls from "@workspace/ui/components/reactbits/css-metaballs/CSSMetaBalls";
-import StickyScroll from "@/components/animations/about/sticky-scroll/sticky-scroll";
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 
 export const Hero = () => {

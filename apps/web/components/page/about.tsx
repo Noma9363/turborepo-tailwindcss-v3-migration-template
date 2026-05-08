@@ -3,10 +3,8 @@
 import {cn} from "@workspace/ui/lib/utils";
 import SplitText from "@workspace/ui/components/reactbits/spile-text/SplitText";
 import React from "react";
-import StickyScroll from "@/components/animations/about/sticky-scroll/sticky-scroll";
 import HorizontalScroll from "@/components/animations/about/horizontal-scroll/horizontal-scroll";
 import '../styles/about.scss';
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
 import {InformationModule} from "@/components/animations/about/information/information";
 import {
     typography
@@ -16,7 +14,7 @@ import {Headline} from "@/components/common/headline/headline";
 export const About = () => {
 
 
-    return (<div className="page-container flex flex-col items-center justify-center min-h-screen">
+    return (<div className="page-container-no-padding flex flex-col items-center justify-center min-h-screen ">
         {/* for spacing */}
 
         <div className="pt-32 pb-48 flex flex-col justify-center align-middle">
@@ -29,7 +27,7 @@ export const About = () => {
             />
             <Headline level="lead" className={cn("pt-8")}>간단히 사용할 수 있으면서 모두가 이해할 수 있게</Headline>
         </div>
-        <section className={cn("pb-12 w-full")}>
+        <section className={cn("pb-0 w-full px-4")}>
             <div className="w-full flex flex-col gap-2">
                 <SplitText
                     textAlign="start"
@@ -40,11 +38,11 @@ export const About = () => {
                 />
                 <Headline level="lead">cool Tools.</Headline>
                 {/* too laggy need to optimize */}
-                <HorizontalScroll/>
             </div>
             {/*<StickyScroll/>*/}
             <div className="pb-12"></div>
         </section>
+        <HorizontalScroll/>
         {/* section-3 */}
         <section id="about" className={cn("page-container w-full flex flex-col items-center justify-stretch")}>
             <div

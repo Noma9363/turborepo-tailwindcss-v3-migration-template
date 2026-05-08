@@ -20,6 +20,11 @@ html, body {
   @include responsive-container;
   @include resize-root-padding;
 }
+.page-container-no-padding{
+  @include responsive-container;
+  @include resize-root-padding;
+  padding: 0;
+}
 
 /* in 2k monitor */
 //max-width: 1232px;

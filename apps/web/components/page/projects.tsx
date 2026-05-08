@@ -27,13 +27,13 @@ export const Projects = () => {
             img: tn_img2,
             link: 'https://co-op-front-final.vercel.app/'
         },
-        {
+        /*{
             title: '피규어 쇼핑몰',
             desc: 'MUI 기반 협업 프로젝트',
             img: tn_img1,
             role: '레이아웃, 관리자, 문의, 상품관리',
             link: 'https://shop-web-inquiry-demo.vercel.app/',
-        },
+        },*/
         {
             title: 'Fetch',
             desc: 'FireBase 를 활용한 간단한 패치 앱',

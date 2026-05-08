@@ -7,17 +7,24 @@ import {HorizontalScrollDummy} from "@/data/about/horizontal-scroll.dummy";
 import HorizontalSection from "@/components/animations/about/items/horizontal-item/horizontal-item";
 import { horizontalLoop } from "@workspace/ui/utility/gsap/helper/horizontalLoop";
 
-export default function HorizontalScroll() {
+export default function HorizontalScroll(isDev:boolean) {
     // Ref
     const panelRef = React.useRef<HTMLDivElement>(null);
     const iconRefs = React.useRef<HTMLDivElement[]>([]);
-    // state
 
-    React.useEffect(()=>{
-        console.log("[HORIZONTAL] Component mounted")
-        console.log("[HORIZONTAL] GSAP version:", gsap.version)
-        console.log("[HORIZONTAL] iconRefs length", iconRefs.current.length);
-    },[])
+    // contains the loop instance by ref
+    const loopRef = React.useRef<gsap.core.Timeline | null>(null);
+
+    // accumulate ref : if unmounted null case
+    const setIconRef = (index: number)=>(el:HTMLDivElement | null) => {
+        if(el){
+            iconRefs.current[index] = el; // mounts : save DOM at current index
+        } else{
+            iconRefs.current.splice(index, 1); // unmounts : removes current index
+        }
+    }
+
+    // state
 
     // when component mounted
     useGSAP(() => {
@@ -25,22 +32,48 @@ export default function HorizontalScroll() {
             if (iconRefs.current.length === 0) return; // case empty: escape
 
             // case success:
-            const loop = horizontalLoop(iconRefs.current, {
+             loopRef.current = horizontalLoop(iconRefs.current, {
                 repeat: -1,
                 speed: 0.4
+                // paused: starting by true controls with intersection observer is betters way
             });
             return () => {
-                loop.kill()
+                loopRef.current?.kill();
+                loopRef.current = null;
             }
         },
         {
             scope: panelRef,
         }
-    )
+    );
 
-    const setIconRef = (index: number) => (el: HTMLDivElement | null) => {
-        if (el) iconRefs.current[index] = el;
-    }
+    React.useEffect(()=>{
+        if(isDev){
+            console.log("[HORIZONTAL] Component mounted")
+            console.log("[HORIZONTAL] GSAP version:", gsap.version)
+            console.log("[HORIZONTAL] iconRefs length", iconRefs.current.length);
+        }
+
+        // when not focusing : pause (blocks scroll broken and performance safe
+        const el = panelRef.current;
+        if(!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if(entry!.isIntersecting){
+                    loopRef.current?.play();
+                } else{
+                    loopRef.current?.pause();
+                }
+            },
+            {
+                threshold: 0.1
+            }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+
+    },[])
+
 
     return (
         <div
