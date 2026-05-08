@@ -7,5 +7,5 @@ export type ProjectCardType = {
     img?: string|StaticImageData;
     role?: string;
 
-    link?: string
+    link: string
 }

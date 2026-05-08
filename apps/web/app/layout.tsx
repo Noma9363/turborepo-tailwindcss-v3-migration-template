@@ -34,25 +34,25 @@ export default function RootLayout({
 }>) {
     return (<html lang="ko" className={cn(`scroll-smooth ${GeistSans.variable} ${notoSansKr.variable}`)}
                   suppressHydrationWarning>
-        <head>
-            <meta name='darkreader-lock' content=""/>
-            <title>Joy Han</title>
-        </head>
-        <body className={cn(`antialiased relative`, GeistSans.className)}>
-        <SmoothScrollProvider>
-            <FloatingNav/>
-            <Providers>
-                {children}
-            </Providers>
-            <footer className="page-container">
-                <Separator className={cn("my-4")}/>
-                <div className={cn("flex-col")}>
-                    <section className={cn("pb-6")}>
-                        Copyright &copy; joyHan
-                    </section>
-                </div>
-            </footer>
-        </SmoothScrollProvider>
-        </body>
-        </html>)
+    <head>
+        <meta name='darkreader-lock' content=""/>
+        <title>Joy Han</title>
+    </head>
+    <body className={cn(`antialiased relative`, GeistSans.className)}>
+    <SmoothScrollProvider>
+        <FloatingNav/>
+        <Providers>
+            {children}
+        </Providers>
+        <footer className="page-container">
+            <Separator className={cn("my-4")}/>
+            <div className={cn("flex-col")}>
+                <section className={cn("pb-6")}>
+                    Copyright &copy; joyHan
+                </section>
+            </div>
+        </footer>
+    </SmoothScrollProvider>
+    </body>
+    </html>)
 }
