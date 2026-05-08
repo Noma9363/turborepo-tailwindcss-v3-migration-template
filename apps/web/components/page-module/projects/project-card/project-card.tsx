@@ -63,10 +63,11 @@ export const ProjectCard = (
                         <Button
                             className={cn("w-fit")}
                             variant="default"
+                            onClick={()=>{
+                                window.open(link, "_blank", 'noopener,noreferrer');
+                            }}
                         >
-                            <a href={link} target="_blank" rel="noopener noreferrer">
-                                Demo
-                            </a>
+                            Demo
                         </Button>
                     </CardDescription>
                 </CardHeader>
