@@ -63,12 +63,10 @@ export const ProjectCard = (
                         <Button
                             className={cn("w-fit")}
                             variant="default"
-                            onClick={() => {
-                                window.open(link)
-                                console.log(link)
-                            }}
                         >
-                            Demo
+                            <a href={link} target="_blank" rel="noopener noreferrer">
+                                Demo
+                            </a>
                         </Button>
                     </CardDescription>
                 </CardHeader>
