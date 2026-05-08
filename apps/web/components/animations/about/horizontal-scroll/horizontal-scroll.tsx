@@ -7,7 +7,11 @@ import {HorizontalScrollDummy} from "@/data/about/horizontal-scroll.dummy";
 import HorizontalSection from "@/components/animations/about/items/horizontal-item/horizontal-item";
 import { horizontalLoop } from "@workspace/ui/utility/gsap/helper/horizontalLoop";
 
-export default function HorizontalScroll(isDev:boolean) {
+interface HorizontalItemProps {
+    isDev?: boolean;
+}
+
+export default function HorizontalScroll({isDev}:HorizontalItemProps) {
     // Ref
     const panelRef = React.useRef<HTMLDivElement>(null);
     const iconRefs = React.useRef<HTMLDivElement[]>([]);
