@@ -65,6 +65,7 @@ export const ProjectCard = (
                             variant="default"
                             onClick={() => {
                                 window.open(link)
+                                console.log(link)
                             }}
                         >
                             Demo
