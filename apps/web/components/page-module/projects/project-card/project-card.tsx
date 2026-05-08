@@ -3,7 +3,7 @@
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@workspace/ui/components/ui/card";
 import {Badge} from "@workspace/ui/components/ui/badge";
-import {Button} from "@workspace/ui/components/ui/button";
+import {Button, buttonVariants} from "@workspace/ui/components/ui/button";
 import {cn} from "@workspace/ui/lib/utils";
 import {typography} from "@workspace/ui/components/ui/tailwind-variations";
 import Image from "next/image";
@@ -60,15 +60,14 @@ export const ProjectCard = (
                         <p className={cn(typography.smallTypo ,"h-1/3 pb-6")}>
                             {role}
                         </p>
-                        <Button
-                            className={cn("w-fit")}
-                            variant="default"
-                            onClick={()=>{
-                                window.open(link, "_blank", 'noopener,noreferrer');
-                            }}
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={cn(buttonVariants({ variant: "default"}), "w-fit")}
                         >
                             Demo
-                        </Button>
+                        </a>
                     </CardDescription>
                 </CardHeader>
             </div>
